@@ -1,10 +1,10 @@
 import 'dart:ui';
 
-import 'package:fitness_app/screens/workout_screen1.dart';
-import 'package:fitness_app/screens/workout_screen2.dart';
+import 'package:fitness_app/screens/Muscular Strength.dart';
+import 'package:fitness_app/screens/Speed.dart';
 import 'package:flutter/material.dart';
 import 'package:fitness_app/widgets/round_info_container.dart';
-import 'package:fitness_app/screens/workout_screen.dart';
+import 'package:fitness_app/screens/Flexibility.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -80,8 +80,8 @@ class HomeScreen extends StatelessWidget {
                         builder: (context) => WorkoutScreen(),
                       )),
                       child: RoundInfoContainer(
-                        title: 'Beginner',
-                        subtitle: 'Level',
+                        title: 'Flexibility',
+                        subtitle: 'Training',
                       ),
                     ),
                     _divider(),
@@ -90,8 +90,8 @@ class HomeScreen extends StatelessWidget {
                         builder: (context) => WorkoutScreen1(),
                       )),
                       child: RoundInfoContainer(
-                        title: 'Medium',
-                        subtitle: 'Level',
+                        title: 'Muscular Strength',
+                        subtitle: 'Training',
                       ),
                     ),
                     _divider(),
@@ -100,8 +100,38 @@ class HomeScreen extends StatelessWidget {
                         builder: (context) => WorkoutScreen2(),
                       )),
                       child: RoundInfoContainer(
-                        title: 'Intermediate',
-                        subtitle: 'Level',
+                        title: "Speed",
+                        subtitle: 'Training',
+                      ),
+                    ),
+                    _divider(),
+                    GestureDetector(
+                      onTap: () =>  Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => WorkoutScreen2(),
+                      )),
+                      child: RoundInfoContainer(
+                        title: "Body Composition",
+                        subtitle: 'Training',
+                      ),
+                    ),
+                    _divider(),
+                    GestureDetector(
+                      onTap: () =>  Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => WorkoutScreen2(),
+                      )),
+                      child: RoundInfoContainer(
+                        title: "Physical Intelligence",
+                        subtitle: 'Training',
+                      ),
+                    ),
+                    _divider(),
+                    GestureDetector(
+                      onTap: () =>  Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => WorkoutScreen2(),
+                      )),
+                      child: RoundInfoContainer(
+                        title: "Muscular Endurance",
+                        subtitle: 'Training',
                       ),
                     ),
                   ],

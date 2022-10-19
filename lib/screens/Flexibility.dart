@@ -2,7 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:fitness_app/widgets/round_info_container.dart';
-import 'package:fitness_app/workout_data.dart';
+import 'package:fitness_app/models/Flexibility.dart';
 
 class WorkoutScreen extends StatelessWidget {
   @override
@@ -62,7 +62,7 @@ class WorkoutScreen extends StatelessWidget {
                       padding: EdgeInsets.symmetric(
                           vertical: 30.0, horizontal: 20.0),
                       child: Text(
-                        'BEGINNER-LEVEL\nWORKOUT',
+                        'FLEXIBILITY\nWORKOUT',
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 24.0,
@@ -74,19 +74,19 @@ class WorkoutScreen extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         RoundInfoContainer(
-                          title: '15',
-                          subtitle: 'Minute',
+                          title: '10',
+                          subtitle: 'Exercise',
                         ),
                         _divider(),
                         RoundInfoContainer(
                           title: '3',
-                          subtitle: 'Times',
+                          subtitle: 'Minute',
                         ),
                         _divider(),
                         RoundInfoContainer(
-                          title: "1-2",
-                          subtitle: "months",
-                        )
+                          title: 'Flexibility Benefit',
+                          subtitle: 'Facts',
+                        ),
                       ],
                     ),
                   ],
@@ -97,16 +97,12 @@ class WorkoutScreen extends StatelessWidget {
           Container(
             margin: EdgeInsets.symmetric(vertical: 20.0, horizontal: 30.0),
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  'Things You Do:',
+                  'Things You Will Do:',
                   style: TextStyle(fontSize: 17.0),
                 ),
-                Text(
-                  'Full Body',
-                  style: TextStyle(fontSize: 17.0),
-                )
               ],
             ),
           ),

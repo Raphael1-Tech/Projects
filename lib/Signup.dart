@@ -11,6 +11,8 @@ class SignUpPage extends StatefulWidget {
 }
 
 class _SignUpPageState extends State<SignUpPage> {
+  bool isHiddenPassword1 = true;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,7 +21,7 @@ class _SignUpPageState extends State<SignUpPage> {
       appBar: AppBar(
         elevation: 0,
         brightness: Brightness.dark,
-        backgroundColor: Colors.lightGreen,
+        backgroundColor: Colors.grey,
         leading: IconButton(
           onPressed: (){
             Navigator.pop(context);
@@ -53,45 +55,70 @@ class _SignUpPageState extends State<SignUpPage> {
                   Text(
                     "Sign Up Here, it's easy here",
                     style: TextStyle(
-                      fontSize: 10.0,
+                      fontSize: 14.0,
                       fontWeight: FontWeight.bold,
-                      color: Colors.grey,
+                      color: Colors.black,
                     ),
                   )
                 ],
               ),
               Column(
                 children:<Widget> [
-                  inputFile(label:'Username'),
-                  inputFile(label: 'Email Account/ Phone Number'),
-                  inputFile(label: 'Password', obscureText: true),
-                  inputFile(label: 'Confirm Password', obscureText: true),
+                  TextField(
+                    decoration: InputDecoration(
+                        hintText: "Username"
+                    ) ,
+                  ),
+                  TextField(
+                    decoration: InputDecoration(
+                        hintText: "Email/Phone Number"
+                    ) ,
+                  ),
+                  TextField(
+                      obscureText: isHiddenPassword1,
+                      decoration: InputDecoration(
+                        hintText: "Password",
+                        suffixIcon: InkWell(
+                          onTap: _togglePasswordView1,
+                          child: Icon(
+                            Icons.visibility,
+                          ),
+                        ),
+                      )
+                  ) ,
+                  TextField(
+                      obscureText: isHiddenPassword1,
+                      decoration: InputDecoration(
+                        hintText: " Confirm Password",
+                        suffixIcon: InkWell(
+                          onTap: _togglePasswordView1,
+                          child: Icon(
+                            Icons.visibility,
+                          ),
+                        ),
+                      )
+                  ) ,
                 ],
               ),
               Container(
-                padding: EdgeInsets.only(top: 5, left: 5),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(50),
-                  border: Border(
-                    bottom: BorderSide(color: Colors.black),
-                    top: BorderSide(color: Colors.black),
-                    left: BorderSide(color: Colors.black),
-                    right: BorderSide(color: Colors.black),
-                  ),
-                ),
                 child: MaterialButton(
                   onPressed: (){},
-                  color: Colors.lightGreenAccent,
+                  color: Colors.grey,
                   elevation: 0,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(50),
                   ),
-                  child: Text(
-                    "Sign up", style: TextStyle(
-                    fontWeight: FontWeight.normal,
-                    fontSize: 20,
-                    color: Colors.white,
-                  ),
+                  child: GestureDetector(
+                    onTap: () =>  Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => LoginPage(),
+                    )),
+                    child: Text(
+                      "Sign up", style: TextStyle(
+                      fontWeight: FontWeight.normal,
+                      fontSize: 20,
+                      color: Colors.white,
+                    ),
+                    ),
                   ),
                 ),
               ),
@@ -99,10 +126,16 @@ class _SignUpPageState extends State<SignUpPage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children:<Widget> [
                   Text('Already have an account?'),
-                  Text("Log-In",style: TextStyle(
-                    fontWeight: FontWeight.w600,
-                    fontSize: 14,
-                  ),
+
+                  GestureDetector(
+                    onTap: () =>  Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => LoginPage(),
+                    )),
+                    child: Text("Log-In",style: TextStyle(
+                      fontWeight: FontWeight.w600,
+                      fontSize: 14,
+                    ),
+                    ),
                   )
                 ],
               )
@@ -111,5 +144,16 @@ class _SignUpPageState extends State<SignUpPage> {
         ),
       ),
     );
+  }
+
+  void _togglePasswordView1() {
+    // if (isHiddenPassword==true) {
+    //   isHiddenPassword=false;
+    // } else {
+    //   isHiddenPassword=true;
+    // }
+    setState(() {
+      isHiddenPassword1 = !isHiddenPassword1;
+    });
   }
 }

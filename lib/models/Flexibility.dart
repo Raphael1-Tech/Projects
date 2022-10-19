@@ -14,7 +14,7 @@ final List<Map<String, dynamic>> round1 = [
     'trailing': Icon(Icons.chevron_right, size: 25),
   },
   {
-    'leading': ['assets/images/squat', '20 reps'],
+    'leading': ['assets/images/squat.jpg', '20 reps'],
     'title': 'Squat',
     'subtitle': '01:00',
     'trailing': Icon(Icons.chevron_right, size: 25),

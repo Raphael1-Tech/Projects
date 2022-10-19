@@ -1,9 +1,10 @@
 import 'dart:ui';
 
-import 'package:fitness_app/workout_data%202.dart';
 import 'package:flutter/material.dart';
 import 'package:fitness_app/widgets/round_info_container.dart';
-import 'package:fitness_app/workout_data.dart';
+import 'package:fitness_app/models/Flexibility.dart';
+
+import '../models/Muscular Strength.dart';
 
 class WorkoutScreen1 extends StatelessWidget {
   @override

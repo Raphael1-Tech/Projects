@@ -18,6 +18,12 @@ class Myfirstapp extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Container(
+          decoration: BoxDecoration(
+            image: DecorationImage(
+                image: AssetImage('assets/images/heavy.webp'),
+                fit: BoxFit.cover,
+                alignment: Alignment.centerLeft),
+          ),
           // we will give this media query height
           // double.infinity would make it big as allowed
           // while the MediaQuery make it big as a screen
@@ -37,22 +43,22 @@ class Myfirstapp extends StatelessWidget {
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 30.0,
+                      color: Colors.white
                     ),
                   ),
                   SizedBox(
                     height: 20,
                   ),
-                  Text('This is an app that can pump you up'),
+                  Text(
+                      'This is an app that can pump you up',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 20.0,
+                      color: Colors.white
+                    ),
+                  ),
 
                 ],
-              ),
-              Container(
-                height: MediaQuery.of(context).size.height / 3,
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                    image: AssetImage('assets/copy.png'),
-                  ),
-                ),
               ),
               Column(
                 children:<Widget>[
@@ -65,11 +71,12 @@ class Myfirstapp extends StatelessWidget {
 
                     },
                     //defining the shape
+                    color: Colors.grey,
                     shape: RoundedRectangleBorder(
                         side: BorderSide(
-                            color: Colors.black
+
                         ),
-                        borderRadius: BorderRadius.circular(10.0)
+                        borderRadius: BorderRadius.circular(50.0)
                     ),
                     child: Text(
                       'Log-In',
@@ -87,7 +94,7 @@ class Myfirstapp extends StatelessWidget {
                     onPressed: (){
                       Navigator.push(context, MaterialPageRoute(builder: (context) => SignUpPage()));
                     },
-                    color: Colors.lightGreenAccent,
+                    color: Colors.black,
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(50.0)
                     ),

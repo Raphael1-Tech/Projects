@@ -1,8 +1,8 @@
 import 'dart:ui';
 
-import 'package:fitness_app/workoutdata_data%203.dart';
 import 'package:flutter/material.dart';
 
+import '../models/Speed.dart';
 import '../widgets/round_info_container.dart';
 
 class WorkoutScreen2 extends StatelessWidget {

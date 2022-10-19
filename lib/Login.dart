@@ -1,9 +1,35 @@
 import 'package:fitness_app/Signup.dart';
-import 'package:fitness_app/screens/home_screen.dart';
+import 'package:fitness_app/widgets/home_screen.dart';
 import 'package:flutter/material.dart';
 
-class LoginPage extends StatelessWidget {
+class LoginPage extends StatefulWidget {
 
+
+  @override
+  State<LoginPage> createState() => _LoginPageState();
+}
+
+class _LoginPageState extends State<LoginPage> {
+  final TextEditingController _controller = TextEditingController();
+  bool isHiddenPassword = false;
+  bool isPasswordCharacter = false;
+  bool hasPasswordOneNumber = false;
+
+  onPasswordChange(String password) {
+    final numericRegex = RegExp(r'[0-9]');
+
+    setState(() {
+      isPasswordCharacter = false;
+      if (password.length >= 8)
+      isPasswordCharacter = true;
+
+      hasPasswordOneNumber = false;
+      if (numericRegex.hasMatch(password))
+      hasPasswordOneNumber= true;
+
+    });
+
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -11,8 +37,7 @@ class LoginPage extends StatelessWidget {
       backgroundColor: Colors.white,
       appBar: AppBar(
         elevation: 0.0,
-        brightness: Brightness.light,
-        backgroundColor: Colors.greenAccent,
+        backgroundColor: Colors.black,
         leading: IconButton(
           onPressed: (){
             Navigator.pop(context);
@@ -23,130 +48,209 @@ class LoginPage extends StatelessWidget {
         ),
       ),
       body: Container(
-        height: MediaQuery.of(context).size.height,
-        width: double.infinity,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children:<Widget> [
-            Expanded(child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children:<Widget> [
-                Column(
+          decoration: BoxDecoration(
+            image: DecorationImage(
+                image: AssetImage('assets/images/run.jpg'),
+                fit: BoxFit.cover,
+                alignment: Alignment.centerLeft),
+          ),
+          height: MediaQuery.of(context).size.height,
+          width: double.infinity,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children:<Widget> [
+              Expanded(child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children:<Widget> [
-                    Text(
-                      'HELLO!!! YOUR HERE NOW',
-                      style: TextStyle(fontSize: 30.0, fontWeight: FontWeight.w300),selectionColor: Colors.lightGreenAccent,
+                    Column(
+                      children:<Widget> [
+                        Text(
+                          'Do you want to pump up?',
+                          style: TextStyle(
+                            fontSize: 30.0,
+                            fontWeight: FontWeight.w300,
+                            color: Colors.red,
+                          ),
+                        ),
+                        Text("Just put your information here!")
+                      ],
                     ),
-                    SizedBox(height: 10,),
-                    Text("YOU JUST NEED TO ENTER HER!",
-                      style: TextStyle(
-                          fontSize: 22.0,
-                          fontWeight: FontWeight.w300,
-                          color: Colors.redAccent),)
-                  ],
-                ),
-                Padding(padding: EdgeInsets.symmetric(horizontal: 40.0),
-                  child: Column(
-                    children:<Widget> [
-                      inputFile(label: 'Email Address'),
-                      inputFile(label: 'Password', obscureText: true)
-                    ],
-                  ),
-                ),
-                Padding(padding:
-                EdgeInsets.symmetric(horizontal: 40.0),
-                  child: Container(
-                    padding: EdgeInsets.only(top: 3, left: 3),
-                    decoration:
-                    BoxDecoration(
-                        borderRadius: BorderRadius.circular(50),
-                        border: Border(
-                          bottom:BorderSide(color: Colors.transparent),
-                          top:BorderSide(color: Colors.transparent),
-                          right:BorderSide(color: Colors.transparent),
-                          left:BorderSide(color: Colors.transparent),
-                        )
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 40.0),
-                  child: Container(
-                    padding: EdgeInsets.only(top: 30.0, left:3.0),
-                    decoration:
-                    BoxDecoration(
-                        borderRadius: BorderRadius.circular(50),
-                        border: Border(
-                          bottom: BorderSide(color: Colors.black),
-                          left: BorderSide(color: Colors.black),
-                          top: BorderSide(color: Colors.black),
-                          right: BorderSide(color: Colors.black),
-                        )
+                    Padding(padding: EdgeInsets.symmetric(horizontal: 20.0),
+                      child: Column(
+                          children:<Widget> [
+                            TextField(
+                              decoration: InputDecoration(
+                                  hintText: "Username"
+                              ) ,
+                            ),
+                            TextField(
+                              controller: _controller,
+                              decoration: InputDecoration(
+                                  hintText: "Email/Phone Number",
+                              ) ,
+                            ),
+                            TextField(
+                              onChanged: (password) => onPasswordChange(password),
+                                obscureText: isHiddenPassword,
+                                decoration: InputDecoration(
+                                  hintText: "Password",
+                                  suffixIcon: InkWell(
+                                    onTap: _togglePasswordView,
+                                    child: Icon(
+                                      Icons.visibility,
+                                    ),
+                                  ),
+                                )
+                            ),
 
-                    ),
-                    child: MaterialButton(
-                      minWidth: double.infinity,
-                      height: 60.0,
-                      onPressed: (){},
-                      color: Colors.black,
-                      elevation: 0.0,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(50.0),
-
+                            Row(
+                            children: [
+                              AnimatedContainer(duration: Duration(milliseconds: 500),
+                                width: 20,
+                                height: 20,
+                                decoration: BoxDecoration(
+                                  color: isPasswordCharacter ? Colors.lightGreenAccent:Colors.transparent,
+                                  border: isPasswordCharacter ?  Border.all(color: Colors.transparent):
+                                  Border.all(color: Colors.grey.shade400),
+                                  borderRadius: BorderRadius.circular(50)
+                                ),
+                              ),
+                              SizedBox(height: 10,),
+                              Text("Contains at least 8 characters")
+                            ],
+                            ),
+                            Row(
+                              children: [
+                                AnimatedContainer(duration: Duration(milliseconds: 500),
+                                  width: 20,
+                                  height: 20,
+                                  decoration: BoxDecoration(
+                                      color: hasPasswordOneNumber ? Colors.lightGreenAccent:Colors.transparent,
+                                      border: hasPasswordOneNumber ?  Border.all(color: Colors.transparent):
+                                      Border.all(color: Colors.grey.shade400),
+                                      borderRadius: BorderRadius.circular(50)
+                                  ),
+                                ),
+                                Text("Contains at least 1 number")
+                              ],
+                            ),
+                          ]
                       ),
-                        child:
+                    ),
+                    Padding(padding:
+                    EdgeInsets.symmetric(horizontal: 20.0),
+                      child: Container(
+                        padding: EdgeInsets.only(top: 3, left: 3),
+                        decoration:
+                        BoxDecoration(
+                            borderRadius: BorderRadius.circular(50),
+                            border: Border(
+                              bottom:BorderSide(color: Colors.transparent),
+                              top:BorderSide(color: Colors.transparent),
+                              right:BorderSide(color: Colors.transparent),
+                              left:BorderSide(color: Colors.transparent),
+                            )
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 40.0),
+                      child: Container(
+                        padding: EdgeInsets.only(top: 30.0, left:3.0),
+                        child: MaterialButton(
+                          minWidth: double.infinity,
+                          height: 60.0,
+                          onPressed: (){},
+                          color: Colors.black,
+                          elevation: 0.0,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(50.0),
+
+                          ),
+                          child:
                           GestureDetector(onTap: () =>  Navigator.of(context).push(MaterialPageRoute(
                             builder: (context) => HomeScreen(),
                           )),
-                          child: Text(
-                            'Log-in Here',
-                            style: TextStyle(
-                              fontWeight: FontWeight.w600,
-                              fontSize: 18.0,
-                              color: Colors.white,
+                            child: Text(
+                              'Log-in Here',
+                              style: TextStyle(
+                                fontWeight: FontWeight.w600,
+                                fontSize: 18.0,
+                                color: Colors.white,
+                              ),
                             ),
                           ),
                         ),
                       ),
                     ),
-                  ),
-                ]),
-    ),
+                  ]),
+              ),
 
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children:<Widget> [
-                    Text("Don't have an account yet?"),
-                      GestureDetector(onTap: () =>  Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => SignUpPage(),
-                      )),
-                      child: Text(" Sign-Up", style: TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.normal,
-                      ),),
-                    )
-                  ],
-                ),
-                SizedBox(height: 10,
-                ),
-                Container(
-                  padding: EdgeInsets.only(top: 100),
-                  height: 300,
-                  width: 300,
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                        image: AssetImage('assets/hello.png'),
-                        fit: BoxFit.fitHeight
-
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children:<Widget> [
+                  Text(
+                    "Don't have an account yet?",
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 16,
+                      color: Colors.red,
                     ),
                   ),
-                )
-              ],
-            )
-    ),
+                  GestureDetector(onTap: () =>  Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => SignUpPage(),
+                  )),
+                    child: Text(" Sign-Up", style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 16,
+                      color: Colors.red,
+                    ),
+                    ),
+                  )
+                ],
+              ),
+              Container(
+                padding: EdgeInsets.only(top: 100),
+                height: 300,
+                width: 300,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                      image: AssetImage('assets/hello.png'),
+                      fit: BoxFit.fitHeight
+
+                  ),
+                ),
+              )
+            ],
+          )
+      ),
     );
   }
 
+
+  void _togglePasswordView() {
+    // if (isHiddenPassword==true) {
+    //   isHiddenPassword=false;
+    // } else {
+    //   isHiddenPassword=true;
+    // }
+    setState(() {
+      isHiddenPassword = !isHiddenPassword;
+    });
+  }
+}
+
+class NewWidget extends StatelessWidget {
+  const NewWidget({
+    Key key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Icon(
+      Icons.visibility,
+    );
+  }
 }
 //We will be creating a widget for a text fields
 Widget inputFile({label,obscureText = false})
@@ -181,7 +285,6 @@ Widget inputFile({label,obscureText = false})
             )
         ),
       ),
-      SizedBox(height: 10,)
     ],
   );
 }
