@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:fitness_app/widgets/round_info_container.dart';
 import 'package:fitness_app/models/Flexibility.dart';
 
-class WorkoutScreen extends StatelessWidget {
+class Flexibility extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -51,13 +51,22 @@ class WorkoutScreen extends StatelessWidget {
                   ],
                 ),
               ),
+
               Positioned(
                 bottom: 20.0,
                 left: 10,
                 right: 10,
                 child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
+                    Text("Flexibility or Limberness is the range of movement that you can achieve with your joints and muscles a number of physical activities may improve flexibility\n such as stretching,yoga,gymnastics and dance.",
+                    style: TextStyle(
+                      fontSize:22,
+                      color: Colors.white,
+                      fontWeight: FontWeight.w600,
+                    ),
+                      textAlign: TextAlign.center,
+                    ),
                     Padding(
                       padding: EdgeInsets.symmetric(
                           vertical: 30.0, horizontal: 20.0),
@@ -79,8 +88,8 @@ class WorkoutScreen extends StatelessWidget {
                         ),
                         _divider(),
                         RoundInfoContainer(
-                          title: '3',
-                          subtitle: 'Minute',
+                          title: '30',
+                          subtitle: 'Reps',
                         ),
                         _divider(),
                         RoundInfoContainer(
@@ -109,7 +118,7 @@ class WorkoutScreen extends StatelessWidget {
           Expanded(
             child: ListView.builder(
               physics: BouncingScrollPhysics(),
-              itemCount: round1.length,
+              itemCount: round2.length,
               itemBuilder: (BuildContext context, int index) {
                 return ListTile(
                   isThreeLine: true,
@@ -117,16 +126,15 @@ class WorkoutScreen extends StatelessWidget {
                     width: 90.0,
                     decoration: BoxDecoration(
                       image: DecorationImage(
-                        image: AssetImage(round1[index]['leading'][0]),
+                        image: AssetImage(round2[index]['leading'][0]),
                         fit: BoxFit.cover,
                       ),
                       borderRadius: BorderRadius.circular(10.0),
                     ),
                   ),
-                  title: Text(round1[index]['title']),
+                  title: Text(round2[index]['title']),
                   subtitle: Text(
-                      '${round1[index]['subtitle']}\n${round1[index]['leading'][1]}'),
-                  trailing: round1[index]['trailing'],
+                      '${round2[index]['subtitle']}\n${round2[index]['leading'][1]}'),
                 );
               },
             ),

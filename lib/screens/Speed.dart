@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import '../models/Speed.dart';
 import '../widgets/round_info_container.dart';
 
-class WorkoutScreen2 extends StatelessWidget {
+class Speed extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -63,7 +63,7 @@ class WorkoutScreen2 extends StatelessWidget {
                           padding: EdgeInsets.symmetric(
                               vertical: 30.0, horizontal: 20.0),
                           child: Text(
-                            'INTERMEDIATE-LEVEL\nWORKOUT',
+                            'SPEED\nWORKOUT',
                             style: TextStyle(
                               color: Colors.white,
                               fontSize: 24.0,
@@ -114,7 +114,7 @@ class WorkoutScreen2 extends StatelessWidget {
               Expanded(
                 child: ListView.builder(
                   physics: BouncingScrollPhysics(),
-                  itemCount: round3.length,
+                  itemCount: round4.length,
                   itemBuilder: (BuildContext context, int index) {
                     return ListTile(
                       isThreeLine: true,
@@ -122,16 +122,15 @@ class WorkoutScreen2 extends StatelessWidget {
                         width: 90.0,
                         decoration: BoxDecoration(
                           image: DecorationImage(
-                            image: AssetImage(round3[index]['leading'][0]),
+                            image: AssetImage(round4[index]['leading'][0]),
                             fit: BoxFit.cover,
                           ),
                           borderRadius: BorderRadius.circular(10.0),
                         ),
                       ),
-                      title: Text(round3[index]['title']),
+                      title: Text(round4[index]['title']),
                       subtitle: Text(
-                          '${round3[index]['subtitle']}\n${round3[index]['leading'][1]}'),
-                      trailing: round3[index]['trailing'],
+                          '${round4[index]['subtitle']}\n${round4[index]['leading'][1]}'),
                     );
                   },
                 ),

@@ -1,6 +1,10 @@
 import 'dart:ui';
 
-import 'package:fitness_app/screens/Muscular Strength.dart';
+
+
+import 'package:fitness_app/screens/Agility.dart';
+import 'package:fitness_app/screens/Balance.dart';
+import 'package:fitness_app/screens/Muscular%20Endurance.dart';
 import 'package:fitness_app/screens/Speed.dart';
 import 'package:flutter/material.dart';
 import 'package:fitness_app/widgets/round_info_container.dart';
@@ -77,7 +81,7 @@ class HomeScreen extends StatelessWidget {
                   children: [
                     GestureDetector(
                       onTap: () =>  Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => WorkoutScreen(),
+                        builder: (context) => Flexibility(),
                       )),
                       child: RoundInfoContainer(
                         title: 'Flexibility',
@@ -87,17 +91,7 @@ class HomeScreen extends StatelessWidget {
                     _divider(),
                     GestureDetector(
                       onTap: () =>  Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => WorkoutScreen1(),
-                      )),
-                      child: RoundInfoContainer(
-                        title: 'Muscular Strength',
-                        subtitle: 'Training',
-                      ),
-                    ),
-                    _divider(),
-                    GestureDetector(
-                      onTap: () =>  Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => WorkoutScreen2(),
+                        builder: (context) => Speed(),
                       )),
                       child: RoundInfoContainer(
                         title: "Speed",
@@ -107,30 +101,30 @@ class HomeScreen extends StatelessWidget {
                     _divider(),
                     GestureDetector(
                       onTap: () =>  Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => WorkoutScreen2(),
-                      )),
-                      child: RoundInfoContainer(
-                        title: "Body Composition",
-                        subtitle: 'Training',
-                      ),
-                    ),
-                    _divider(),
-                    GestureDetector(
-                      onTap: () =>  Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => WorkoutScreen2(),
-                      )),
-                      child: RoundInfoContainer(
-                        title: "Physical Intelligence",
-                        subtitle: 'Training',
-                      ),
-                    ),
-                    _divider(),
-                    GestureDetector(
-                      onTap: () =>  Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => WorkoutScreen2(),
+                        builder: (context) => MuscularEndurance(),
                       )),
                       child: RoundInfoContainer(
                         title: "Muscular Endurance",
+                        subtitle: 'Training',
+                      ),
+                    ),
+                    _divider(),
+                    GestureDetector(
+                      onTap: () =>  Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => Agility(),
+                      )),
+                      child: RoundInfoContainer(
+                        title: "  Agility",
+                        subtitle: 'Training',
+                      ),
+                    ),
+                    _divider(),
+                    GestureDetector(
+                      onTap: () =>  Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => Balance(),
+                      )),
+                      child: RoundInfoContainer(
+                        title: "Balance",
                         subtitle: 'Training',
                       ),
                     ),
