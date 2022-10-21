@@ -1,0 +1,5 @@
+package gradleexception
+
+enum java {
+
+}

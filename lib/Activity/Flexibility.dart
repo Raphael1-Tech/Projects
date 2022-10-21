@@ -1,52 +1,80 @@
 import 'package:flutter/material.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
-
-class YOUTUBE extends StatefulWidget {
+@override
+Widget build (BuildContext context) {
+  return MaterialApp(
+    title: "Flexibility Video",
+    theme: ThemeData(
+      primarySwatch: Colors.blue,
+      visualDensity: VisualDensity.adaptivePlatformDensity
+    ),
+    home: Videos(title: "Youtube Quad Stretch", url: "https://www.youtube.com/watch?v=zFpq_j453hQ",),
+  );
+}
+class Videos extends StatefulWidget {
+  Videos ({this.title,this.url});
+  final String title;
+  final url;
 
 
   @override
-  State<YOUTUBE> createState() => _YOUTUBEState();
+  State<Videos> createState() => _VideosState();
 }
 
-class _YOUTUBEState extends State<YOUTUBE> {
+class _VideosState extends State<Videos> {
+  YoutubePlayerController _controller;
 
-  YoutubePlayerController _controller = YoutubePlayerController(
-    initialVideoId: 'iLnmTe5Q2Qw',
-    flags: YoutubePlayerFlags(
-      autoPlay: true,
-      mute: true,
-    ),
-  );
+  void runYoutubePlayer() {
+    _controller = YoutubePlayerController(initialVideoId: YoutubePlayer.convertUrlToId(widget.url),
+      flags: YoutubePlayerFlags(
+        enableCaption: false,
+        isLive: false,
+        autoPlay: false,
+      )
+    );
+  }
+  @override
+  void initState() {
+    runYoutubePlayer();
+    super.initState();
+  }
+  @override
+  void dispose () {
+    _controller.dispose();
+    super.dispose();
+  }
+  @override
+  void deactivate() {
+    _controller.pause();
+    super.deactivate();
+  }
 
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.amber,
-        title: Text(
-            'Flexibility Workout'),
+    return YoutubePlayerBuilder(
+      player: YoutubePlayer(
+        controller: _controller,
       ),
-      body: Center(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children:<Widget> [
-
-
-            Text("Youtube Link"),
-            SizedBox(height: 20,
-            ),
-
-            YoutubePlayer(
-              controller: _controller,
-              showVideoProgressIndicator: true,
-              progressIndicatorColor: Colors.amberAccent,
-            )
-          ],
+      builder: (context, player) {
+        return Scaffold(
+        appBar: AppBar(
+        title: Text(widget.title),
         ),
-      ),
+        body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          player,
+        SizedBox(height: 40.0,
+        ),
+        Text('You have push this many times')
+        ],
+        ),
+        );
+      }
+
+      ,
     );
   }
 }

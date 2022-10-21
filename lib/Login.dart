@@ -209,18 +209,6 @@ class _LoginPageState extends State<LoginPage> {
                   )
                 ],
               ),
-              Container(
-                padding: EdgeInsets.only(top: 100),
-                height: 300,
-                width: 300,
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                      image: AssetImage('assets/hello.png'),
-                      fit: BoxFit.fitHeight
-
-                  ),
-                ),
-              )
             ],
           )
       ),

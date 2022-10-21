@@ -17,10 +17,10 @@ class Agility extends StatelessWidget {
               Stack(
                 children: [
                   Container(
-                    height: 370.0,
+                    height: 400.0,
                     decoration: BoxDecoration(
                       image: DecorationImage(
-                        image: AssetImage('assets/images/workout1.jpg'),
+                        image: AssetImage('assets/images/agility.webp'),
                         fit: BoxFit.cover,
                         alignment: Alignment.center,
                       ),
@@ -60,7 +60,7 @@ class Agility extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        Text("Flexibility or Limberness is the range of movement that you can achieve with your joints and muscles a number of physical activities may improve flexibility\n such as stretching,yoga,gymnastics and dance.",
+                        Text("Agility is the ability to change direction rapidly and requires physical capacity and technical skill to execute. \n It is an essential component of many sports and therefore health and fitness professionals should look to assess this skill when rehabilitating patients or optimizing a client's performance.",
                           style: TextStyle(
                             fontSize:22,
                             color: Colors.white,
@@ -70,14 +70,14 @@ class Agility extends StatelessWidget {
                         ),
                         Padding(
                           padding: EdgeInsets.symmetric(
-                              vertical: 30.0, horizontal: 20.0),
+                              vertical: 30.0, horizontal: 30.0),
                           child: Text(
-                            'FLEXIBILITY\nWORKOUT',
+                            'AGILITY\nWORKOUT',
                             style: TextStyle(
                               color: Colors.white,
-                              fontSize: 24.0,
+                              fontSize: 22.0,
                             ),
-                            textAlign: TextAlign.start,
+                            textAlign: TextAlign.center,
                           ),
                         ),
                         Row(
@@ -94,8 +94,8 @@ class Agility extends StatelessWidget {
                             ),
                             _divider(),
                             RoundInfoContainer(
-                              title: 'Flexibility Benefit',
-                              subtitle: 'Facts',
+                              title: 'Agility',
+                              subtitle: 'Benefit Facts',
                             ),
                           ],
                         ),

@@ -17,24 +17,33 @@ class _SignUpPageState extends State<SignUpPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: true,
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.black,
       appBar: AppBar(
         elevation: 0,
-        brightness: Brightness.dark,
-        backgroundColor: Colors.grey,
+        brightness: Brightness.light,
+        backgroundColor: Colors.black,
         leading: IconButton(
           onPressed: (){
             Navigator.pop(context);
           },
           icon: Icon(Icons.arrow_back,
             size: 20,
-            color: Colors.black,),
+            color: Colors.white,),
 
 
         ),
       ),
+
       body: SingleChildScrollView(
         child: Container(
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage(
+                'assets/images/workout.jpg'),
+              fit: BoxFit.cover,
+              alignment: Alignment.centerLeft
+            )
+          ),
           padding: EdgeInsets.symmetric(horizontal:40),
           height: MediaQuery.of(context).size.height- 50,
           width: double.infinity,
@@ -48,7 +57,7 @@ class _SignUpPageState extends State<SignUpPage> {
                     style: TextStyle(
                       fontSize: 20.0,
                       fontWeight: FontWeight.bold,
-                      color: Colors.black,
+                      color: Colors.white,
                     ),
                   ),
                   SizedBox(height: 20.0,),
@@ -57,7 +66,7 @@ class _SignUpPageState extends State<SignUpPage> {
                     style: TextStyle(
                       fontSize: 14.0,
                       fontWeight: FontWeight.bold,
-                      color: Colors.black,
+                      color: Colors.white,
                     ),
                   )
                 ],
@@ -66,18 +75,28 @@ class _SignUpPageState extends State<SignUpPage> {
                 children:<Widget> [
                   TextField(
                     decoration: InputDecoration(
-                        hintText: "Username"
+                    hintText: "Username",
+                      hintStyle: TextStyle(
+                          color: Colors.white
+                      ),
                     ) ,
                   ),
                   TextField(
                     decoration: InputDecoration(
-                        hintText: "Email/Phone Number"
+                        hintText: "Email/Phone Number",
+                      hintStyle: TextStyle(
+                          color: Colors.white
+                      ),
                     ) ,
                   ),
                   TextField(
                       obscureText: isHiddenPassword1,
                       decoration: InputDecoration(
                         hintText: "Password",
+                        hintStyle: TextStyle(
+                            color: Colors.white
+                        ),
+                        fillColor: Colors.white,
                         suffixIcon: InkWell(
                           onTap: _togglePasswordView1,
                           child: Icon(
@@ -90,6 +109,10 @@ class _SignUpPageState extends State<SignUpPage> {
                       obscureText: isHiddenPassword1,
                       decoration: InputDecoration(
                         hintText: " Confirm Password",
+                        hintStyle: TextStyle(
+                          color: Colors.white
+                        ),
+                        fillColor: Colors.white,
                         suffixIcon: InkWell(
                           onTap: _togglePasswordView1,
                           child: Icon(
@@ -125,15 +148,23 @@ class _SignUpPageState extends State<SignUpPage> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children:<Widget> [
-                  Text('Already have an account?'),
-
+                  Text('Already have an account?',
+                    style: TextStyle(
+                      fontWeight: FontWeight.w600,
+                      fontSize: 20,
+                      color: Colors.white,
+                    )
+                  ),
+                  SizedBox(width: 10,
+                  ),
                   GestureDetector(
                     onTap: () =>  Navigator.of(context).push(MaterialPageRoute(
                       builder: (context) => LoginPage(),
                     )),
                     child: Text("Log-In",style: TextStyle(
                       fontWeight: FontWeight.w600,
-                      fontSize: 14,
+                      fontSize: 18,
+                      color: Colors.white,
                     ),
                     ),
                   )

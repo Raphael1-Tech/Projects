@@ -1,64 +1,63 @@
-import 'package:flutter/material.dart';
+
 
 final List<Map<String, dynamic>> round2 = [
   {
     'leading': ['assets/images/quad stretch.jpg', '2 reps'],
-    'title': '1. Standing Quad Stretch',
-    'subtitle': '00:45',
+    'title': 'Drill #1. Standing Quad Stretch',
+
 
 
   },
   {
     'leading': ['assets/images/side stretch.jpg', '2 reps'],
-    'title': '2. Standing Side Stretch',
-    'subtitle': '00:30',
+    'title': 'Drill #2. Standing Side Stretch',
+
 
   },
   {
     'leading': ['assets/images/SHS.jpg', '3 reps'],
-    'title': '3. Seated Hamstring Stretch',
-    'subtitle': '01:00',
+    'title': 'Drill #3. Seated Hamstring Stretch',
+
 
   },
   {
     'leading': ['assets/images/SCS.jpg', '3 reps'],
-    'title': '4. Standing Calf Stretch',
-    'subtitle': '00:50',
+    'title': 'Drill #4. Standing Calf Stretch',
+
 
   },
   {
     'leading': ['assets/images/SS.jpg', '3 reps on each side'],
-    'title': '5. Shoulder Stretch',
-    'subtitle': '00:30',
+    'title': 'Drill #5. Shoulder Stretch',
+
 
   },
   {
     'leading': ['assets/images/FH.jpg', '3 reps'],
-    'title': '6. The Forward Hang',
-    'subtitle': '00:50',
+    'title': 'Drill #6. The Forward Hang',
+
 
   },
   {
     'leading': ['assets/images/BS.jpg', '3 reps'],
-    'title': '7. Back stretch',
-    'subtitle': '00:50',
+    'title': 'Drill #7. Back stretch',
+
 
   },
   {
     'leading': ['assets/images/BGS.jpg', '1 rep'],
-    'title': '8. Butterfly Groin Stretch',
-    'subtitle': '00:50',
+    'title': 'Drill #8. Butterfly Groin Stretch',
 
   },
   {
     'leading': ['assets/images/SPS.jpg', '5 reps'],
-    'title': '9. Split Squat',
-    'subtitle': '00:50',
+    'title': 'Drill #9. Split Squat',
+
 
   },
   {
     'leading': ['assets/images/MS.webp', '5 reps'],
-    'title': '10. Modified Cobra',
-    'subtitle': '00:50',
+    'title': 'Drill #10. Modified Cobra',
+
   },
 ];

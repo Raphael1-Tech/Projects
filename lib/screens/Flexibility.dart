@@ -1,5 +1,6 @@
 import 'dart:ui';
 
+import 'package:fitness_app/Activity/Flexibility.dart';
 import 'package:flutter/material.dart';
 import 'package:fitness_app/widgets/round_info_container.dart';
 import 'package:fitness_app/models/Flexibility.dart';
@@ -16,10 +17,10 @@ class Flexibility extends StatelessWidget {
           Stack(
             children: [
               Container(
-                height: 370.0,
+                height: 400.0,
                 decoration: BoxDecoration(
                   image: DecorationImage(
-                    image: AssetImage('assets/images/workout1.jpg'),
+                    image: AssetImage('assets/images/Flexible.webp'),
                     fit: BoxFit.cover,
                     alignment: Alignment.center,
                   ),
@@ -76,7 +77,7 @@ class Flexibility extends StatelessWidget {
                           color: Colors.white,
                           fontSize: 24.0,
                         ),
-                        textAlign: TextAlign.start,
+                        textAlign: TextAlign.center,
                       ),
                     ),
                     Row(
@@ -93,8 +94,8 @@ class Flexibility extends StatelessWidget {
                         ),
                         _divider(),
                         RoundInfoContainer(
-                          title: 'Flexibility Benefit',
-                          subtitle: 'Facts',
+                          title: 'Flexibility',
+                          subtitle: 'Benefit Facts',
                         ),
                       ],
                     ),
@@ -120,21 +121,26 @@ class Flexibility extends StatelessWidget {
               physics: BouncingScrollPhysics(),
               itemCount: round2.length,
               itemBuilder: (BuildContext context, int index) {
-                return ListTile(
-                  isThreeLine: true,
-                  leading: Container(
-                    width: 90.0,
-                    decoration: BoxDecoration(
-                      image: DecorationImage(
-                        image: AssetImage(round2[index]['leading'][0]),
-                        fit: BoxFit.cover,
+                return GestureDetector(
+                   onTap: (){
+                     Navigator.push(context, MaterialPageRoute(builder: (_) => Videos()));
+                   },
+                  child: ListTile(
+                    isThreeLine: true,
+                    leading: Container(
+                      width: 90.0,
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage(round2[index]['leading'][0]),
+                          fit: BoxFit.cover,
+                        ),
+                        borderRadius: BorderRadius.circular(10.0),
                       ),
-                      borderRadius: BorderRadius.circular(10.0),
                     ),
+                    title: Text(round2[index]['title']),
+                    subtitle: Text(
+                        '${round2[index]['subtitle']}\n${round2[index]['leading'][1]}'),
                   ),
-                  title: Text(round2[index]['title']),
-                  subtitle: Text(
-                      '${round2[index]['subtitle']}\n${round2[index]['leading'][1]}'),
                 );
               },
             ),

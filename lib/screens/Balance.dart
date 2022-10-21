@@ -20,7 +20,7 @@ class Balance extends StatelessWidget {
                     height: 370.0,
                     decoration: BoxDecoration(
                       image: DecorationImage(
-                        image: AssetImage('assets/images/workout1.jpg'),
+                        image: AssetImage('assets/images/balance.jpg'),
                         fit: BoxFit.cover,
                         alignment: Alignment.center,
                       ),
@@ -94,8 +94,8 @@ class Balance extends StatelessWidget {
                             ),
                             _divider(),
                             RoundInfoContainer(
-                              title: 'Flexibility Benefit',
-                              subtitle: 'Facts',
+                              title: 'Balance',
+                              subtitle: 'Benefit Facts',
                             ),
                           ],
                         ),

@@ -22,7 +22,7 @@ class MuscularEndurance extends StatelessWidget {
                     height: 370.0,
                     decoration: BoxDecoration(
                       image: DecorationImage(
-                        image: AssetImage('assets/images/workout1.jpg'),
+                        image: AssetImage('assets/images/power.jpg'),
                         fit: BoxFit.cover,
                         alignment: Alignment.center,
                       ),
@@ -96,8 +96,8 @@ class MuscularEndurance extends StatelessWidget {
                             ),
                             _divider(),
                             RoundInfoContainer(
-                              title: "3-5",
-                              subtitle: "months",
+                              title: "Muscular Endurance ",
+                              subtitle: " Benefit Facts",
                             )
                           ],
                         ),
@@ -109,16 +109,12 @@ class MuscularEndurance extends StatelessWidget {
               Container(
                 margin: EdgeInsets.symmetric(vertical: 20.0, horizontal: 30.0),
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
                       'Things You Do:',
                       style: TextStyle(fontSize: 17.0),
                     ),
-                    Text(
-                      'Full Body',
-                      style: TextStyle(fontSize: 17.0),
-                    )
                   ],
                 ),
               ),

@@ -5,7 +5,7 @@ import 'dart:ui';
 import 'package:fitness_app/screens/Agility.dart';
 import 'package:fitness_app/screens/Balance.dart';
 import 'package:fitness_app/screens/Muscular%20Endurance.dart';
-import 'package:fitness_app/screens/Speed.dart';
+import 'package:fitness_app/screens/Coordination.dart';
 import 'package:flutter/material.dart';
 import 'package:fitness_app/widgets/round_info_container.dart';
 import 'package:fitness_app/screens/Flexibility.dart';
@@ -91,10 +91,10 @@ class HomeScreen extends StatelessWidget {
                     _divider(),
                     GestureDetector(
                       onTap: () =>  Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => Speed(),
+                        builder: (context) => Coordination(),
                       )),
                       child: RoundInfoContainer(
-                        title: "Speed",
+                        title: "Coordination",
                         subtitle: 'Training',
                       ),
                     ),
