@@ -37,27 +37,47 @@ class Myfirstapp extends StatelessWidget {
             crossAxisAlignment:  CrossAxisAlignment.center,
             children: <Widget> [
               Column(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   Text(
-                    'Welcome',
+                    'WELCOME TO WORKOUT BUDDY',
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 30.0,
-                      color: Colors.white
+                      color: Colors.blueGrey,
                     ),
                   ),
                   SizedBox(
                     height: 20,
                   ),
-                  Text(
-                      'This is an app that can pump you up',
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 20.0,
-                      color: Colors.white
-                    ),
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                          'An app where you can be physical strong, motivated and pump up',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 18.0,
+                          color: Colors.white,
+                        ),
+                      ),
+                    ],
                   ),
-
+                  SizedBox(height: 20,
+                  ),
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        'This will help you get in shape and to be fit',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 14.0,
+                          color: Colors.white,
+                        ),
+                      ),
+                    ],
+                  ),
                 ],
               ),
               Column(

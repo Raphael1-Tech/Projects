@@ -1,6 +1,5 @@
 import 'dart:ui';
 
-import 'package:fitness_app/Activity/Flexibility.dart';
 import 'package:flutter/material.dart';
 import 'package:fitness_app/widgets/round_info_container.dart';
 import 'package:fitness_app/models/Flexibility.dart';
@@ -121,10 +120,7 @@ class Flexibility extends StatelessWidget {
               physics: BouncingScrollPhysics(),
               itemCount: round2.length,
               itemBuilder: (BuildContext context, int index) {
-                return GestureDetector(
-                   onTap: (){
-                     Navigator.push(context, MaterialPageRoute(builder: (_) => Videos()));
-                   },
+                return Container(
                   child: ListTile(
                     isThreeLine: true,
                     leading: Container(

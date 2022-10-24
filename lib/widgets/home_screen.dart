@@ -66,7 +66,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
                 Text(
-                  "Let's Train your\n PHYSICAL BODY",
+                  "Time to train your\n bodies",
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 28.0,
