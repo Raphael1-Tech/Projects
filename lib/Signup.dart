@@ -11,7 +11,26 @@ class SignUpPage extends StatefulWidget {
 }
 
 class _SignUpPageState extends State<SignUpPage> {
-  bool isHiddenPassword1 = true;
+
+  bool isHiddenPassword1 = false;
+  bool isPasswordCharacter = false;
+  bool hasPasswordOneNumber = false;
+
+  onPasswordChange(String password) {
+    final numericRegex = RegExp(r'[0-9]');
+
+    setState(() {
+      isPasswordCharacter = false;
+      if (password.length >= 8)
+        isPasswordCharacter = true;
+
+      hasPasswordOneNumber = false;
+      if (numericRegex.hasMatch(password))
+        hasPasswordOneNumber= true;
+
+    });
+
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -105,6 +124,39 @@ class _SignUpPageState extends State<SignUpPage> {
                         ),
                       )
                   ) ,
+                  SizedBox(height: 20,),
+                  Row(
+                    children: [
+                      AnimatedContainer(duration: Duration(milliseconds: 500),
+                        width: 20,
+                        height: 20,
+                        decoration: BoxDecoration(
+                            color: isPasswordCharacter ? Colors.lightGreenAccent:Colors.transparent,
+                            border: isPasswordCharacter ?  Border.all(color: Colors.transparent):
+                            Border.all(color: Colors.grey.shade400),
+                            borderRadius: BorderRadius.circular(50)
+                        ),
+                      ),
+                      SizedBox(height: 20,),
+                      Text("Contains at least 8 characters")
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      AnimatedContainer(duration: Duration(milliseconds: 500),
+                        width: 20,
+                        height: 20,
+                        decoration: BoxDecoration(
+                            color: hasPasswordOneNumber ? Colors.lightGreenAccent:Colors.transparent,
+                            border: hasPasswordOneNumber ?  Border.all(color: Colors.transparent):
+                            Border.all(color: Colors.grey.shade400),
+                            borderRadius: BorderRadius.circular(50)
+                        ),
+                      ),
+                      SizedBox(height: 20,),
+                      Text("Contains at least 1 number")
+                    ],
+                  ),
                   TextField(
                       obscureText: isHiddenPassword1,
                       decoration: InputDecoration(
@@ -120,7 +172,39 @@ class _SignUpPageState extends State<SignUpPage> {
                           ),
                         ),
                       )
-                  ) ,
+                  ),
+                  SizedBox(height: 20,),
+                  Row(
+                    children: [
+                      AnimatedContainer(duration: Duration(milliseconds: 500),
+                        width: 20,
+                        height: 20,
+                        decoration: BoxDecoration(
+                            color: isPasswordCharacter ? Colors.lightGreenAccent:Colors.transparent,
+                            border: isPasswordCharacter ?  Border.all(color: Colors.transparent):
+                            Border.all(color: Colors.grey.shade400),
+                            borderRadius: BorderRadius.circular(50)
+                        ),
+                      ),
+                      SizedBox(height: 10,),
+                      Text("Contains at least 8 characters")
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      AnimatedContainer(duration: Duration(milliseconds: 500),
+                        width: 20,
+                        height: 20,
+                        decoration: BoxDecoration(
+                            color: hasPasswordOneNumber ? Colors.lightGreenAccent:Colors.transparent,
+                            border: hasPasswordOneNumber ?  Border.all(color: Colors.transparent):
+                            Border.all(color: Colors.grey.shade400),
+                            borderRadius: BorderRadius.circular(50)
+                        ),
+                      ),
+                      Text("Contains at least 1 number")
+                    ],
+                  ),
                 ],
               ),
               Container(

@@ -12,24 +12,8 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
   final TextEditingController _controller = TextEditingController();
   bool isHiddenPassword = false;
-  bool isPasswordCharacter = false;
-  bool hasPasswordOneNumber = false;
 
-  onPasswordChange(String password) {
-    final numericRegex = RegExp(r'[0-9]');
 
-    setState(() {
-      isPasswordCharacter = false;
-      if (password.length >= 8)
-      isPasswordCharacter = true;
-
-      hasPasswordOneNumber = false;
-      if (numericRegex.hasMatch(password))
-      hasPasswordOneNumber= true;
-
-    });
-
-  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -90,7 +74,6 @@ class _LoginPageState extends State<LoginPage> {
                               ) ,
                             ),
                             TextField(
-                              onChanged: (password) => onPasswordChange(password),
                                 obscureText: isHiddenPassword,
                                 decoration: InputDecoration(
                                   hintText: "Password",
@@ -109,14 +92,9 @@ class _LoginPageState extends State<LoginPage> {
                                 width: 20,
                                 height: 20,
                                 decoration: BoxDecoration(
-                                  color: isPasswordCharacter ? Colors.lightGreenAccent:Colors.transparent,
-                                  border: isPasswordCharacter ?  Border.all(color: Colors.transparent):
-                                  Border.all(color: Colors.grey.shade400),
-                                  borderRadius: BorderRadius.circular(50)
                                 ),
                               ),
                               SizedBox(height: 10,),
-                              Text("Contains at least 8 characters")
                             ],
                             ),
                             Row(
@@ -125,13 +103,9 @@ class _LoginPageState extends State<LoginPage> {
                                   width: 20,
                                   height: 20,
                                   decoration: BoxDecoration(
-                                      color: hasPasswordOneNumber ? Colors.lightGreenAccent:Colors.transparent,
-                                      border: hasPasswordOneNumber ?  Border.all(color: Colors.transparent):
-                                      Border.all(color: Colors.grey.shade400),
                                       borderRadius: BorderRadius.circular(50)
                                   ),
                                 ),
-                                Text("Contains at least 1 number")
                               ],
                             ),
                           ]

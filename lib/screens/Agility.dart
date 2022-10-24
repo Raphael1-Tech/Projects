@@ -135,7 +135,8 @@ class Agility extends StatelessWidget {
                       ),
                       title: Text(round5[index]['title']),
                       subtitle: Text(
-                          '${round5[index]['subtitle']}\n${round5[index]['leading'][1]}'),
+                          '${round5[index]['subtitle']}\n${round5[index]['leading'][1]}\n${round5[index]['repeat']}'),
+
                     );
                   },
                 ),

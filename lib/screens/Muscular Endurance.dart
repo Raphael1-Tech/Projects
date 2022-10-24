@@ -121,7 +121,7 @@ class MuscularEndurance extends StatelessWidget {
               Expanded(
                 child: ListView.builder(
                   physics: BouncingScrollPhysics(),
-                  itemCount: round3.length,
+                  itemCount: round1.length,
                   itemBuilder: (BuildContext context, int index) {
                     return ListTile(
                       isThreeLine: true,
@@ -129,16 +129,16 @@ class MuscularEndurance extends StatelessWidget {
                         width: 90.0,
                         decoration: BoxDecoration(
                           image: DecorationImage(
-                            image: AssetImage(round3[index]['leading'][0]),
+                            image: AssetImage(round1[index]['leading'][0]),
                             fit: BoxFit.cover,
                           ),
                           borderRadius: BorderRadius.circular(10.0),
                         ),
                       ),
-                      title: Text(round3[index]['title']),
+                      title: Text(round1[index]['title']),
                       subtitle: Text(
-                          '${round3[index]['subtitle']}\n${round3[index]['leading'][1]}'),
-                      trailing: round3[index]['trailing'],
+                          '${round1[index]['subtitle']}\n${round1[index]['leading'][1]}'),
+                      trailing: round1[index]['trailing'],
                     );
                   },
                 ),

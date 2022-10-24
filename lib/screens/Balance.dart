@@ -119,7 +119,7 @@ class Balance extends StatelessWidget {
               Expanded(
                 child: ListView.builder(
                   physics: BouncingScrollPhysics(),
-                  itemCount: round1.length,
+                  itemCount: round4.length,
                   itemBuilder: (BuildContext context, int index) {
                     return ListTile(
                       isThreeLine: true,
@@ -127,15 +127,15 @@ class Balance extends StatelessWidget {
                         width: 90.0,
                         decoration: BoxDecoration(
                           image: DecorationImage(
-                            image: AssetImage(round1[index]['leading'][0]),
+                            image: AssetImage(round4[index]['leading'][0]),
                             fit: BoxFit.cover,
                           ),
                           borderRadius: BorderRadius.circular(10.0),
                         ),
                       ),
-                      title: Text(round1[index]['title']),
+                      title: Text(round4[index]['title']),
                       subtitle: Text(
-                          '${round1[index]['subtitle']}\n${round1[index]['leading'][1]}'),
+                          '${round4[index]['subtitle']}\n${round4[index]['leading'][1]}\n${round4[index]['repeat']}'),
                     );
                   },
                 ),
