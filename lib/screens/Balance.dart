@@ -1,5 +1,6 @@
 import 'dart:ui';
 
+import 'package:fitness_app/Activity/Balance.dart';
 import 'package:flutter/material.dart';
 import 'package:fitness_app/widgets/round_info_container.dart';
 
@@ -93,9 +94,14 @@ class Balance extends StatelessWidget {
                               subtitle: 'Reps',
                             ),
                             _divider(),
-                            RoundInfoContainer(
-                              title: 'Balance',
-                              subtitle: 'Benefit Facts',
+                            GestureDetector(
+                              onTap: () =>  Navigator.of(context).push(MaterialPageRoute(
+                                builder: (context) => FLEX2(),
+                              )),
+                              child: RoundInfoContainer(
+                                title: 'Balance',
+                                subtitle: 'Benefits',
+                              ),
                             ),
                           ],
                         ),

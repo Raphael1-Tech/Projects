@@ -1,5 +1,6 @@
 import 'dart:ui';
 
+import 'package:fitness_app/Activity/Flexibility.dart';
 import 'package:flutter/material.dart';
 import 'package:fitness_app/widgets/round_info_container.dart';
 import 'package:fitness_app/models/Flexibility.dart';
@@ -92,9 +93,14 @@ class Flexibility extends StatelessWidget {
                           subtitle: 'Reps',
                         ),
                         _divider(),
-                        RoundInfoContainer(
-                          title: 'Flexibility',
-                          subtitle: 'Benefit Facts',
+                        GestureDetector(
+                          onTap: () =>  Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) => FLEX4(),
+                          )),
+                          child: RoundInfoContainer(
+                            title: 'Flexibility',
+                            subtitle: 'Benefits',
+                          ),
                         ),
                       ],
                     ),
@@ -135,7 +141,8 @@ class Flexibility extends StatelessWidget {
                     ),
                     title: Text(round2[index]['title']),
                     subtitle: Text(
-                        '${round2[index]['subtitle']}\n${round2[index]['leading'][1]}'),
+                        '${round2[index]['subtitle']}\n${round2[index]['leading'][1]}'
+                    ),
                   ),
                 );
               },

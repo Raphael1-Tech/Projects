@@ -1,5 +1,6 @@
 import 'dart:ui';
 
+import 'package:fitness_app/Activity/Agility.dart';
 import 'package:flutter/material.dart';
 import 'package:fitness_app/widgets/round_info_container.dart';
 import '../models/Agility.dart';
@@ -93,9 +94,14 @@ class Agility extends StatelessWidget {
                               subtitle: 'Reps',
                             ),
                             _divider(),
-                            RoundInfoContainer(
-                              title: 'Agility',
-                              subtitle: 'Benefit Facts',
+                            GestureDetector(
+                              onTap: () =>  Navigator.of(context).push(MaterialPageRoute(
+                                builder: (context) => FLEX1(),
+                              )),
+                              child: RoundInfoContainer(
+                                title: 'Agility',
+                                subtitle: 'Benefit Facts',
+                              ),
                             ),
                           ],
                         ),

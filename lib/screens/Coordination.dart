@@ -1,5 +1,6 @@
 import 'dart:ui';
 
+import 'package:fitness_app/Activity/Coordination.dart';
 import 'package:flutter/material.dart';
 
 import '../models/Coordination.dart';
@@ -93,9 +94,14 @@ class Coordination extends StatelessWidget {
                               subtitle: 'Times',
                             ),
                             _divider(),
-                            RoundInfoContainer(
-                              title: "Coordination",
-                              subtitle: "Benefits Facts",
+                            GestureDetector(
+                              onTap: () =>  Navigator.of(context).push(MaterialPageRoute(
+                                builder: (context) => FLEX3(),
+                              )),
+                              child: RoundInfoContainer(
+                                title: "Coordination",
+                                subtitle: "Benefits",
+                              ),
                             )
                           ],
                         ),

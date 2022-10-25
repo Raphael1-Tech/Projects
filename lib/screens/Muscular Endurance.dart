@@ -1,8 +1,8 @@
 import 'dart:ui';
 
+import 'package:fitness_app/Activity/Muscular%20Endurance.dart';
 import 'package:flutter/material.dart';
 import 'package:fitness_app/widgets/round_info_container.dart';
-import 'package:fitness_app/models/Flexibility.dart';
 
 import '../models/Muscular Endurance.dart';
 
@@ -95,9 +95,14 @@ class MuscularEndurance extends StatelessWidget {
                               subtitle: 'Times',
                             ),
                             _divider(),
-                            RoundInfoContainer(
-                              title: "Muscular Endurance ",
-                              subtitle: " Benefit Facts",
+                            GestureDetector(
+                              onTap: () =>  Navigator.of(context).push(MaterialPageRoute(
+                                builder: (context) => FLEX5(),
+                              )),
+                              child: RoundInfoContainer(
+                                title: "Muscular Endurance ",
+                                subtitle: " Benefits",
+                              ),
                             )
                           ],
                         ),
