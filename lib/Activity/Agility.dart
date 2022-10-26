@@ -42,7 +42,7 @@ class FLEX1 extends StatelessWidget {
         title: Text(
             'Agility Training Health Benefits'
         ),
-        backgroundColor: Colors.black,
+        backgroundColor: Colors.grey,
         centerTitle: true,
       ),
       body: SingleChildScrollView(

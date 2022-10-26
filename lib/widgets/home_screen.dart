@@ -2,6 +2,7 @@ import 'dart:ui';
 
 
 
+
 import 'package:fitness_app/screens/Agility.dart';
 import 'package:fitness_app/screens/Balance.dart';
 import 'package:fitness_app/screens/Muscular%20Endurance.dart';
@@ -10,16 +11,24 @@ import 'package:flutter/material.dart';
 import 'package:fitness_app/widgets/round_info_container.dart';
 import 'package:fitness_app/screens/Flexibility.dart';
 
+import '../Navigation dart/naviigation_drawer.dart';
+
 class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer:NavigationDrawer(),
+      appBar: AppBar(
+        title: Text(""),
+        centerTitle: true,
+        backgroundColor: Colors.grey,
+      ),
       body: Stack(
         children: [
           Container(
             decoration: BoxDecoration(
               image: DecorationImage(
-                  image: AssetImage('assets/images/home_image.jpg'),
+                  image: AssetImage('assets/images/4.jpg'),
                   fit: BoxFit.cover,
                   alignment: Alignment.centerLeft),
             ),
@@ -138,6 +147,9 @@ class HomeScreen extends StatelessWidget {
     );
   }
 
+
+
+  update () {}
   Widget _divider() {
     return Container(
       width: 1.2,

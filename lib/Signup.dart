@@ -1,3 +1,4 @@
+import 'package:fitness_app/main.dart';
 import 'package:flutter/material.dart';
 
 
@@ -43,7 +44,7 @@ class _SignUpPageState extends State<SignUpPage> {
         backgroundColor: Colors.black,
         leading: IconButton(
           onPressed: (){
-            Navigator.pop(context);
+            Navigator.push(context, MaterialPageRoute(builder: (context) => Myfirstapp()));
           },
           icon: Icon(Icons.arrow_back,
             size: 20,
@@ -58,7 +59,7 @@ class _SignUpPageState extends State<SignUpPage> {
           decoration: BoxDecoration(
             image: DecorationImage(
               image: AssetImage(
-                'assets/images/workout.jpg'),
+                'assets/images/12.jpg'),
               fit: BoxFit.cover,
               alignment: Alignment.centerLeft
             )

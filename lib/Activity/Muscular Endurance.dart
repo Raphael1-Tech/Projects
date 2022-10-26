@@ -33,9 +33,9 @@ class FLEX5 extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-            'Flexibility Training Health Benefits'
+            'Muscular Endurance Training Health Benefits'
         ),
-        backgroundColor: Colors.black,
+        backgroundColor: Colors.grey,
         centerTitle: true,
       ),
       body: SingleChildScrollView(

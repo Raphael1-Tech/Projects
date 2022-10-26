@@ -1,4 +1,5 @@
 import 'package:fitness_app/Signup.dart';
+import 'package:fitness_app/main.dart';
 import 'package:fitness_app/widgets/home_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -24,7 +25,7 @@ class _LoginPageState extends State<LoginPage> {
         backgroundColor: Colors.black,
         leading: IconButton(
           onPressed: (){
-            Navigator.pop(context);
+            Navigator.push(context, MaterialPageRoute(builder: (context) => Myfirstapp()));
           },
           icon: Icon(Icons.arrow_back_ios),
           iconSize: 20.0,
@@ -34,7 +35,7 @@ class _LoginPageState extends State<LoginPage> {
       body: Container(
           decoration: BoxDecoration(
             image: DecorationImage(
-                image: AssetImage('assets/images/run.jpg'),
+                image: AssetImage('assets/images/20.jpg'),
                 fit: BoxFit.cover,
                 alignment: Alignment.centerLeft),
           ),
@@ -49,14 +50,21 @@ class _LoginPageState extends State<LoginPage> {
                     Column(
                       children:<Widget> [
                         Text(
-                          'Do you want to pump up?',
+                          "Time To Be Fit",
                           style: TextStyle(
                             fontSize: 30.0,
                             fontWeight: FontWeight.w300,
-                            color: Colors.red,
+                            color: Colors.white,
                           ),
                         ),
-                        Text("Just put your information here!")
+                        SizedBox(height: 20,),
+                        Text("Just put your information here!",
+                          style: TextStyle(
+                            fontSize: 22,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                          ),
+                        ),
                       ],
                     ),
                     Padding(padding: EdgeInsets.symmetric(horizontal: 20.0),
@@ -64,19 +72,28 @@ class _LoginPageState extends State<LoginPage> {
                           children:<Widget> [
                             TextField(
                               decoration: InputDecoration(
-                                  hintText: "Username"
+                                  hintText: "Username",
+                                hintStyle: TextStyle(
+                                    color: Colors.white
+                                ),
                               ) ,
                             ),
                             TextField(
                               controller: _controller,
                               decoration: InputDecoration(
                                   hintText: "Email/Phone Number",
+                                hintStyle: TextStyle(
+                                    color: Colors.white
+                                ),
                               ) ,
                             ),
                             TextField(
                                 obscureText: isHiddenPassword,
                                 decoration: InputDecoration(
                                   hintText: "Password",
+                                  hintStyle: TextStyle(
+                                      color: Colors.white
+                                  ),
                                   suffixIcon: InkWell(
                                     onTap: _togglePasswordView,
                                     child: Icon(
@@ -135,7 +152,7 @@ class _LoginPageState extends State<LoginPage> {
                           minWidth: double.infinity,
                           height: 60.0,
                           onPressed: (){},
-                          color: Colors.black,
+                          color: Colors.white,
                           elevation: 0.0,
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(50.0),
@@ -150,7 +167,7 @@ class _LoginPageState extends State<LoginPage> {
                               style: TextStyle(
                                 fontWeight: FontWeight.w600,
                                 fontSize: 18.0,
-                                color: Colors.white,
+                                color: Colors.black,
                               ),
                             ),
                           ),
@@ -159,7 +176,6 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                   ]),
               ),
-
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children:<Widget> [
@@ -168,7 +184,7 @@ class _LoginPageState extends State<LoginPage> {
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 16,
-                      color: Colors.red,
+                      color: Colors.white,
                     ),
                   ),
                   GestureDetector(onTap: () =>  Navigator.of(context).push(MaterialPageRoute(
@@ -177,7 +193,7 @@ class _LoginPageState extends State<LoginPage> {
                     child: Text(" Sign-Up", style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 16,
-                      color: Colors.red,
+                      color: Colors.white,
                     ),
                     ),
                   )

@@ -1,6 +1,8 @@
 import 'dart:ui';
 
 import 'package:fitness_app/Activity/Muscular%20Endurance.dart';
+import 'package:fitness_app/Progress/Muscular%20Endurance.dart';
+import 'package:fitness_app/widgets/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:fitness_app/widgets/round_info_container.dart';
 
@@ -22,7 +24,7 @@ class MuscularEndurance extends StatelessWidget {
                     height: 370.0,
                     decoration: BoxDecoration(
                       image: DecorationImage(
-                        image: AssetImage('assets/images/power.jpg'),
+                        image: AssetImage('assets/images/PLANK.jpg'),
                         fit: BoxFit.cover,
                         alignment: Alignment.center,
                       ),
@@ -49,7 +51,7 @@ class MuscularEndurance extends StatelessWidget {
                           icon: Icon(Icons.chevron_left),
                           iconSize: 30,
                           color: Colors.white,
-                          onPressed: () => Navigator.pop(context),
+                          onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context) => HomeScreen()))
                         ),
                       ],
                     ),
@@ -76,7 +78,7 @@ class MuscularEndurance extends StatelessWidget {
                           child: Text(
                             'MUSCULAR ENDURANCE\n WORKOUT',
                             style: TextStyle(
-                              color: Colors.white,
+                              color: Colors.black,
                               fontSize: 24.0,
                             ),
                             textAlign: TextAlign.center,
@@ -90,9 +92,14 @@ class MuscularEndurance extends StatelessWidget {
                               subtitle: 'Minute',
                             ),
                             _divider(),
-                            RoundInfoContainer(
-                              title: '3',
-                              subtitle: 'Times',
+                            GestureDetector(
+                              onTap: () =>  Navigator.of(context).push(MaterialPageRoute(
+                                builder: (context) => Prog5(),
+                              )),
+                              child: RoundInfoContainer(
+                                title: "Procedure in ",
+                                subtitle: "Things You'll Do",
+                              ),
                             ),
                             _divider(),
                             GestureDetector(

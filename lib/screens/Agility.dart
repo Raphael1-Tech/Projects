@@ -1,6 +1,8 @@
 import 'dart:ui';
 
 import 'package:fitness_app/Activity/Agility.dart';
+import 'package:fitness_app/Progress/Agility.dart';
+import 'package:fitness_app/widgets/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:fitness_app/widgets/round_info_container.dart';
 import '../models/Agility.dart';
@@ -21,7 +23,7 @@ class Agility extends StatelessWidget {
                     height: 400.0,
                     decoration: BoxDecoration(
                       image: DecorationImage(
-                        image: AssetImage('assets/images/agility.webp'),
+                        image: AssetImage('assets/images/AGILE.jpg'),
                         fit: BoxFit.cover,
                         alignment: Alignment.center,
                       ),
@@ -48,7 +50,7 @@ class Agility extends StatelessWidget {
                           icon: Icon(Icons.chevron_left),
                           iconSize: 30,
                           color: Colors.white,
-                          onPressed: () => Navigator.pop(context),
+                            onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context)=> HomeScreen()))
                         ),
                       ],
                     ),
@@ -75,7 +77,7 @@ class Agility extends StatelessWidget {
                           child: Text(
                             'AGILITY\nWORKOUT',
                             style: TextStyle(
-                              color: Colors.white,
+                              color: Colors.black,
                               fontSize: 22.0,
                             ),
                             textAlign: TextAlign.center,
@@ -89,9 +91,14 @@ class Agility extends StatelessWidget {
                               subtitle: 'Exercise',
                             ),
                             _divider(),
-                            RoundInfoContainer(
-                              title: '30',
-                              subtitle: 'Reps',
+                            GestureDetector(
+                              onTap: () =>  Navigator.of(context).push(MaterialPageRoute(
+                                builder: (context) => Prog1(),
+                              )),
+                              child: RoundInfoContainer(
+                                title: "Procedure in ",
+                                subtitle: "Things You'll Do",
+                              ),
                             ),
                             _divider(),
                             GestureDetector(

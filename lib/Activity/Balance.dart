@@ -10,8 +10,8 @@ class FLEX2 extends StatelessWidget {
       "\nBalance exercises keep our bodies strong and stable. We should practice it along with other forms of exercise to gain maximum benefit. Balance is required for everything we do, including activities such as bending, walking, running, or even getting up from a chair.\nHence training for balance will help improve your daily life and also prevent falls and injuries that could happen due to lack of balance.Any type of activity that keeps you moving can actually help you maintain your balance. Still, it is necessary to perform specific balance exercises that improve your balance."
       "\nAny type of activity that keeps you moving can actually help you maintain your balance. Still, it is necessary to perform specific balance exercises that improve your balance."
       "\nWho Can Benefit from Balance Exercises?"
-      "\nThough balance exercises help everyone, a few people can benefit more than others. Balance exercises "
-      "\nare especially important for older people who have weak muscles. When older individuals perform these "
+      "\nThough balance exercises help everyone, a few people can benefit more than others. "
+      "\nBalance exercises are especially important for older people who have weak muscles. When older individuals perform these "
       "\nexercises regularly, they can strengthen their muscles and avoid falls and injuries.Also,with older people, injuries take time to heal, and recovery is much slower. Hence, strengthening the core, lower back, and leg muscles can help maintain the right balance."
       "\nBalance exercises can also be helpful to athletes, who suffer from frequent ankle injuries and ligament issues. Some types of these exercises may also help individuals who suffer from vertigo by minimizing the symptoms. However, you should start the balance exercises slowly and then move on to more repetitions or probably holding on in a specific position for a longer time."
       "\nBenefits of Balance Exercises"
@@ -31,9 +31,9 @@ class FLEX2 extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-            'Coordination Training Health Benefits'
+            'Balance Training Health Benefits'
         ),
-        backgroundColor: Colors.black,
+        backgroundColor: Colors.grey,
         centerTitle: true,
       ),
       body: SingleChildScrollView(

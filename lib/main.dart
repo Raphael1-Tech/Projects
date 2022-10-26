@@ -20,7 +20,7 @@ class Myfirstapp extends StatelessWidget {
         child: Container(
           decoration: BoxDecoration(
             image: DecorationImage(
-                image: AssetImage('assets/images/heavy.webp'),
+                image: AssetImage('assets/images/9.jpg'),
                 fit: BoxFit.cover,
                 alignment: Alignment.centerLeft),
           ),
@@ -40,11 +40,11 @@ class Myfirstapp extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   Text(
-                    'WELCOME TO WORKOUT BUDDY',
+                    ' WORKOUT \t BUDDY',
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 30.0,
-                      color: Colors.blueGrey,
+                      color: Colors.white,
                     ),
                   ),
                   SizedBox(
@@ -54,16 +54,25 @@ class Myfirstapp extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
-                          'An app where you can be physical strong, motivated and pump up',
+                          'An app where you can be physical strong',
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 18.0,
                           color: Colors.white,
                         ),
+                        textAlign: TextAlign.center,
+                      ),
+                      SizedBox(height:10),
+                      Text("motivated and pump up",
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 16,
+                          color: Colors.white,
+                        ),
                       ),
                     ],
                   ),
-                  SizedBox(height: 20,
+                  SizedBox(height: 10,
                   ),
                   Column(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -87,22 +96,18 @@ class Myfirstapp extends StatelessWidget {
                     height: 60,
                     onPressed: (){
                       Navigator.push(context, MaterialPageRoute(builder: (context) => LoginPage()));
-
-
                     },
                     //defining the shape
-                    color: Colors.grey,
+                    color: Colors.white,
                     shape: RoundedRectangleBorder(
-                        side: BorderSide(
-
-                        ),
                         borderRadius: BorderRadius.circular(50.0)
                     ),
                     child: Text(
                       'Log-In',
                       style: TextStyle(
                           fontWeight: FontWeight.w900,
-                          fontSize: 18.0
+                          fontSize: 18.0,
+                        color: Colors.black,
                       ),
                     ),
                   ),
@@ -114,14 +119,15 @@ class Myfirstapp extends StatelessWidget {
                     onPressed: (){
                       Navigator.push(context, MaterialPageRoute(builder: (context) => SignUpPage()));
                     },
-                    color: Colors.black,
+                    color: Colors.white,
                     shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(50.0)
+                      borderRadius: BorderRadius.circular(50.0),
+
                     ),
                     child: Text(
                       'Sign-Up',
                       style: TextStyle(
-                        color: Colors.white,
+                        color: Colors.black,
                         fontWeight: FontWeight.w600,
                         fontSize: 18.0,
                       ),

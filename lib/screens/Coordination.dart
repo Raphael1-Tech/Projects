@@ -1,6 +1,8 @@
 import 'dart:ui';
 
 import 'package:fitness_app/Activity/Coordination.dart';
+import 'package:fitness_app/Progress/Coordination.dart';
+import 'package:fitness_app/widgets/home_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../models/Coordination.dart';
@@ -21,7 +23,7 @@ class Coordination extends StatelessWidget {
                     height: 370.0,
                     decoration: BoxDecoration(
                       image: DecorationImage(
-                        image: AssetImage('assets/images/COORDINATION.jpg'),
+                        image: AssetImage('assets/images/jumprope.webp'),
                         fit: BoxFit.cover,
                         alignment: Alignment.center,
                       ),
@@ -48,7 +50,7 @@ class Coordination extends StatelessWidget {
                           icon: Icon(Icons.chevron_left),
                           iconSize: 30,
                           color: Colors.white,
-                          onPressed: () => Navigator.pop(context),
+                            onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context)=> HomeScreen()))
                         ),
                       ],
                     ),
@@ -75,7 +77,7 @@ class Coordination extends StatelessWidget {
                           child: Text(
                             'COORDINATION\nWORKOUT',
                             style: TextStyle(
-                              color: Colors.white,
+                              color: Colors.black,
                               fontSize: 24.0,
                             ),
                             textAlign: TextAlign.center,
@@ -89,9 +91,14 @@ class Coordination extends StatelessWidget {
                               subtitle: 'Hour',
                             ),
                             _divider(),
-                            RoundInfoContainer(
-                              title: '3',
-                              subtitle: 'Times',
+                            GestureDetector(
+                              onTap: () =>  Navigator.of(context).push(MaterialPageRoute(
+                                builder: (context) => Prog3(),
+                              )),
+                              child: RoundInfoContainer(
+                                title: "Procedure in ",
+                                subtitle: "Things You'll Do",
+                              ),
                             ),
                             _divider(),
                             GestureDetector(

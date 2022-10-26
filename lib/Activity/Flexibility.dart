@@ -23,7 +23,7 @@ class FLEX4 extends StatelessWidget {
         title: Text(
             'Flexibility Training Health Benefits'
         ),
-        backgroundColor: Colors.black,
+        backgroundColor: Colors.grey,
         centerTitle: true,
       ),
       body: SingleChildScrollView(
