@@ -96,8 +96,8 @@ class Agility extends StatelessWidget {
                                 builder: (context) => Prog1(),
                               )),
                               child: RoundInfoContainer(
-                                title: "Procedure in ",
-                                subtitle: "Things You'll Do",
+                                title: "Procedure in",
+                                subtitle:"Things You'll Do",
                               ),
                             ),
                             _divider(),

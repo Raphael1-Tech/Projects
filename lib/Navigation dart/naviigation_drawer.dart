@@ -1,4 +1,7 @@
+import 'package:fitness_app/Login.dart';
+import 'package:fitness_app/Navigation%20dart/pages/my%20account.dart';
 import 'package:fitness_app/Navigation%20dart/pages/people.dart';
+import 'package:fitness_app/Navigation%20dart/pages/settings.dart';
 import 'package:flutter/material.dart';
 
 import 'drawer_item.dart';
@@ -49,9 +52,16 @@ class NavigationDrawer extends StatelessWidget {
     Navigator.pop(context);
 
     switch(index){
-      case 0:
-        Navigator.push(context, MaterialPageRoute(builder: (context) => People()));
+      case 1:
+        Navigator.push(context, MaterialPageRoute(builder: (context) => SettingsUI()));
         break;
+      case 2:
+        Navigator.push(context, MaterialPageRoute(builder: (context) => SettingsPage()));
+        break;
+      case 3:
+        Navigator.push(context, MaterialPageRoute(builder: (context) => LoginPage()));
+        break;
+
     }
   }
 

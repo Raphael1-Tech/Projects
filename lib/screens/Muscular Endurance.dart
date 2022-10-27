@@ -88,8 +88,8 @@ class MuscularEndurance extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
                             RoundInfoContainer(
-                              title: '30',
-                              subtitle: 'Minute',
+                              title: '10',
+                              subtitle: 'Exercises',
                             ),
                             _divider(),
                             GestureDetector(

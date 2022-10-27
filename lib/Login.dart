@@ -77,6 +77,7 @@ class _LoginPageState extends State<LoginPage> {
                                     color: Colors.white
                                 ),
                               ) ,
+                              style: TextStyle(color: Colors.white),
                             ),
                             TextField(
                               controller: _controller,
@@ -86,6 +87,7 @@ class _LoginPageState extends State<LoginPage> {
                                     color: Colors.white
                                 ),
                               ) ,
+                              style: TextStyle(color: Colors.white),
                             ),
                             TextField(
                                 obscureText: isHiddenPassword,
@@ -100,7 +102,8 @@ class _LoginPageState extends State<LoginPage> {
                                       Icons.visibility,
                                     ),
                                   ),
-                                )
+                                ),
+                              style: TextStyle(color: Colors.white),
                             ),
 
                             Row(

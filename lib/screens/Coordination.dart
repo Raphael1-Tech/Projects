@@ -87,8 +87,8 @@ class Coordination extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
                             RoundInfoContainer(
-                              title: 'An',
-                              subtitle: 'Hour',
+                              title: '10',
+                              subtitle: 'Exercises',
                             ),
                             _divider(),
                             GestureDetector(

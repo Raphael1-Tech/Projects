@@ -56,11 +56,9 @@ class _SettingsPageState extends State<SettingsPage> {
             SizedBox(
               height: 10,
             ),
-            buildAccountOptionRow(context, "Change password"),
-            buildAccountOptionRow(context, "Content settings"),
-            buildAccountOptionRow(context, "Social"),
-            buildAccountOptionRow(context, "Language"),
-            buildAccountOptionRow(context, "Privacy and security"),
+            buildAccountOptionRow(context, "Account Settings"),
+            buildAccountOptionRow(context, "Report Technical Problem"),
+            buildAccountOptionRow(context, "Help"),
             SizedBox(
               height: 40,
             ),
@@ -86,20 +84,67 @@ class _SettingsPageState extends State<SettingsPage> {
             SizedBox(
               height: 10,
             ),
-            buildNotificationOptionRow("New for you", true),
-            buildNotificationOptionRow("Account activity", true),
-            buildNotificationOptionRow("Opportunity", false),
+            buildNotificationOptionRow("Sounds and Notifications", true),
+            buildNotificationOptionRow("Message Notifications", true),
+            buildNotificationOptionRow("Groups in Android Auto", false,),
             SizedBox(
               height: 50,
             ),
-            Center(
-              child: TextButton(
-                onPressed: () {},
-                child: Text("SIGN OUT",
-                    style: TextStyle(
-                        fontSize: 16, letterSpacing: 2.2, color: Colors.black)),
-              ),
-            )
+            Row(
+              children: [
+                Icon(
+                  Icons.upload,
+                  color: Colors.green,
+                ),
+                SizedBox(
+                  width: 8,
+                ),
+                Text(
+                  "App update settings",
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                ),
+              ],
+            ),
+            Divider(
+              height: 15,
+              thickness: 2,
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            buildNotificationOptionRow("Auto-update Workout Buddy", true),
+
+            buildNotificationOptionRow("Workout Buddy update Available", true),
+            SizedBox(
+              height: 50,
+            ),
+            Row(
+              children: [
+                Icon(
+                  Icons.featured_play_list_rounded,
+                  color: Colors.green,
+                ),
+                SizedBox(
+                  width: 8,
+                ),
+                Text(
+                  "Free Features",
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                ),
+              ],
+            ),
+            Divider(
+              height: 15,
+              thickness: 2,
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            buildNotificationOptionRow("Automatic Downloads", false),
+            //Sending photos, messages and stickers will not use your data
+            SizedBox(
+              height: 50,
+            ),
           ],
         ),
       ),

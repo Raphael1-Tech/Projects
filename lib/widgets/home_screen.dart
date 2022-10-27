@@ -44,48 +44,155 @@ class HomeScreen extends StatelessWidget {
             left: 0,
             right: 0,
             bottom: 0,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Container(
-                  padding:
-                      EdgeInsets.symmetric(vertical: 10.0, horizontal: 22.0),
-                  decoration: BoxDecoration(
-                    color: Colors.white.withOpacity(.6),
-                    borderRadius: BorderRadius.circular(5),
-                  ),
-                  child: Text(
-                    'NEW',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 16.0,
+            child: SingleChildScrollView(
+              child: Expanded(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Container(
+                      padding:
+                          EdgeInsets.symmetric(vertical: 10.0, horizontal: 22.0),
+                      decoration: BoxDecoration(
+                        color: Colors.white.withOpacity(.6),
+                        borderRadius: BorderRadius.circular(5),
+                      ),
                     ),
-                  ),
-                ),
-                Padding(
-                  padding: EdgeInsets.symmetric(vertical: 30.0),
-                  child: Text(
-                    'FULL - BODY KILLER\nWORKOUT',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 28.0,
+                    Padding(
+                      padding: EdgeInsets.symmetric(vertical: 30.0),
+                      child: Text(
+                        'FULL - BODY KILLER\nWORKOUT',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 28.0,
+                        ),
+                        textAlign: TextAlign.center,
+                      ),
                     ),
-                    textAlign: TextAlign.center,
-                  ),
-                ),
-                Text(
-                  "Time to train your\n bodies",
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 28.0,
-                   ),
-              textAlign: TextAlign.center,
-                   ),
-                SizedBox(
-                  height: 50,
-                ),
+                    Text(
+                      "Time to train your\n bodies",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 28.0,
+                       ),
+                  textAlign: TextAlign.center,
+                       ),
+                    SizedBox(
+                      height: 50,
+                    ),
+                    Text(
+                      "Exercise",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 28.0,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                    SizedBox(height: 20,),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        GestureDetector(
+                          onTap: () =>  Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) => Flexibility(),
+                          )),
+                          child: RoundInfoContainer(
+                            title: 'Flexibility',
+                            subtitle: 'Training',
+                          ),
+                        ),
+                        _divider(),
+                        GestureDetector(
+                          onTap: () =>  Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) => Coordination(),
+                          )),
+                          child: RoundInfoContainer(
+                            title: "Coordination",
+                            subtitle: 'Training',
+                          ),
+                        ),
+                        _divider(),
+                        GestureDetector(
+                          onTap: () =>  Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) => MuscularEndurance(),
+                          )),
+                          child: RoundInfoContainer(
+                            title: "Muscular Endurance",
+                            subtitle: 'Training',
+                          ),
+                        ),
+                        _divider(),
+                        GestureDetector(
+                          onTap: () =>  Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) => Agility(),
+                          )),
+                          child: RoundInfoContainer(
+                            title: "  Agility",
+                            subtitle: 'Training',
+                          ),
+                        ),
+                        _divider(),
+                        GestureDetector(
+                          onTap: () =>  Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) => Balance(),
+                          )),
+                          child: RoundInfoContainer(
+                            title: "Balance",
+                            subtitle: 'Training',
+                          ),
+                        ),
+
+
+                      ],
+                    ),
+                    SizedBox(height: 50,),
+                    Text(
+                      "7x4 CHALLENGE",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20.0,
+                      ),
+                      textAlign: TextAlign.start,
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        GestureDetector(
+                          onTap: () =>  Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) => Flexibility(),
+                          )),
+                          child: RoundInfoContainer(
+                            title: 'FULL BODY',
+                            subtitle: '7X4 CHALLENGE',
+                          ),
+                        ),
+                        _divider(),
+                        GestureDetector(
+                          onTap: () =>  Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) => Coordination(),
+                          )),
+                          child: RoundInfoContainer(
+                            title: "LOWER BODY",
+                            subtitle: '7X4 CHALLENGE',
+                          ),
+                        ),
+                      ],
+                    ),
+                    SizedBox(height: 50,),
+                    Text(
+                      "BEGINNER",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20.0,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                SizedBox(height: 30),
                 Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     GestureDetector(
@@ -93,8 +200,8 @@ class HomeScreen extends StatelessWidget {
                         builder: (context) => Flexibility(),
                       )),
                       child: RoundInfoContainer(
-                        title: 'Flexibility',
-                        subtitle: 'Training',
+                        title: 'ABS',
+                        subtitle: "BEGINNER",
                       ),
                     ),
                     _divider(),
@@ -103,43 +210,45 @@ class HomeScreen extends StatelessWidget {
                         builder: (context) => Coordination(),
                       )),
                       child: RoundInfoContainer(
-                        title: "Coordination",
-                        subtitle: 'Training',
+                        title: 'CHEST',
+                        subtitle: "BEGINNER",
                       ),
                     ),
                     _divider(),
                     GestureDetector(
                       onTap: () =>  Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => MuscularEndurance(),
+                        builder: (context) => Coordination(),
                       )),
                       child: RoundInfoContainer(
-                        title: "Muscular Endurance",
-                        subtitle: 'Training',
+                        title: 'ARM',
+                        subtitle: "BEGINNER",
                       ),
                     ),
                     _divider(),
                     GestureDetector(
                       onTap: () =>  Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => Agility(),
+                        builder: (context) => Coordination(),
                       )),
                       child: RoundInfoContainer(
-                        title: "  Agility",
-                        subtitle: 'Training',
+                        title: 'LEG',
+                        subtitle: "BEGINNER",
                       ),
                     ),
                     _divider(),
                     GestureDetector(
                       onTap: () =>  Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => Balance(),
+                        builder: (context) => Coordination(),
                       )),
                       child: RoundInfoContainer(
-                        title: "Balance",
-                        subtitle: 'Training',
+                        title: 'SHOULDER & BACK',
+                        subtitle: "BEGINNER",
                       ),
                     ),
                   ],
                 ),
-              ],
+                  ],
+                ),
+              ),
             ),
           ),
         ],

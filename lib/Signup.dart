@@ -27,7 +27,7 @@ class _SignUpPageState extends State<SignUpPage> {
 
       hasPasswordOneNumber = false;
       if (numericRegex.hasMatch(password))
-        hasPasswordOneNumber= true;
+        hasPasswordOneNumber = true;
 
     });
 
@@ -100,6 +100,7 @@ class _SignUpPageState extends State<SignUpPage> {
                           color: Colors.white
                       ),
                     ) ,
+                    style: TextStyle(color: Colors.white),
                   ),
                   TextField(
                     decoration: InputDecoration(
@@ -108,6 +109,7 @@ class _SignUpPageState extends State<SignUpPage> {
                           color: Colors.white
                       ),
                     ) ,
+                    style: TextStyle(color: Colors.white),
                   ),
                   TextField(
                       obscureText: isHiddenPassword1,
@@ -123,7 +125,8 @@ class _SignUpPageState extends State<SignUpPage> {
                             Icons.visibility,
                           ),
                         ),
-                      )
+                      ),
+                    style: TextStyle(color: Colors.white),
                   ) ,
                   SizedBox(height: 20,),
                   Row(
@@ -133,13 +136,17 @@ class _SignUpPageState extends State<SignUpPage> {
                         height: 20,
                         decoration: BoxDecoration(
                             color: isPasswordCharacter ? Colors.lightGreenAccent:Colors.transparent,
-                            border: isPasswordCharacter ?  Border.all(color: Colors.transparent):
+                            border: isPasswordCharacter ?  Border.all(color: Colors.transparent,):
                             Border.all(color: Colors.grey.shade400),
                             borderRadius: BorderRadius.circular(50)
                         ),
                       ),
                       SizedBox(height: 20,),
-                      Text("Contains at least 8 characters")
+                      Text("Contains at least 8 characters",
+                        style: TextStyle(
+                          color: Colors.white,
+                        ),
+                      )
                     ],
                   ),
                   Row(
@@ -155,7 +162,11 @@ class _SignUpPageState extends State<SignUpPage> {
                         ),
                       ),
                       SizedBox(height: 20,),
-                      Text("Contains at least 1 number")
+                      Text("Contains at least 1 number",
+                        style: TextStyle(
+                          color: Colors.white,
+                        ),
+                      ),
                     ],
                   ),
                   TextField(
@@ -172,7 +183,8 @@ class _SignUpPageState extends State<SignUpPage> {
                             Icons.visibility,
                           ),
                         ),
-                      )
+                      ),
+                    style: TextStyle(color: Colors.white),
                   ),
                   SizedBox(height: 20,),
                   Row(
@@ -188,7 +200,10 @@ class _SignUpPageState extends State<SignUpPage> {
                         ),
                       ),
                       SizedBox(height: 10,),
-                      Text("Contains at least 8 characters")
+                      Text("Contains at least 8 characters",
+                        style: TextStyle(
+                          color: Colors.white,
+                        ),)
                     ],
                   ),
                   Row(
@@ -203,7 +218,10 @@ class _SignUpPageState extends State<SignUpPage> {
                             borderRadius: BorderRadius.circular(50)
                         ),
                       ),
-                      Text("Contains at least 1 number")
+                      Text("Contains at least 1 number",
+                        style: TextStyle(
+                          color: Colors.white,
+                        ),)
                     ],
                   ),
                 ],
