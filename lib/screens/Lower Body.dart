@@ -1,14 +1,13 @@
 import 'dart:ui';
-
-import 'package:fitness_app/Activity/Agility.dart';
-import 'package:fitness_app/Steps%20you%20need%20to%20do/Agility.dart';
+import 'package:fitness_app/models/Full%20Body.dart';
+import 'package:fitness_app/models/LowerBody.dart';
 import 'package:fitness_app/widgets/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:fitness_app/widgets/round_info_container.dart';
-import '../models/Agility.dart';
 
 
-class Agility extends StatelessWidget {
+
+class LOWERBODY extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -47,9 +46,9 @@ class Agility extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         IconButton(
-                          icon: Icon(Icons.chevron_left),
-                          iconSize: 30,
-                          color: Colors.white,
+                            icon: Icon(Icons.chevron_left),
+                            iconSize: 30,
+                            color: Colors.white,
                             onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context)=> HomeScreen()))
                         ),
                       ],
@@ -63,19 +62,11 @@ class Agility extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        Text("Agility is the ability to change direction rapidly and requires physical capacity and technical skill to execute. \n It is an essential component of many sports and therefore health and fitness professionals should look to assess this skill when rehabilitating patients or optimizing a client's performance.",
-                          style: TextStyle(
-                            fontSize:22,
-                            color: Colors.white,
-                            fontWeight: FontWeight.w600,
-                          ),
-                          textAlign: TextAlign.center,
-                        ),
                         Padding(
                           padding: EdgeInsets.symmetric(
                               vertical: 30.0, horizontal: 30.0),
                           child: Text(
-                            'AGILITY\nWORKOUT',
+                            'LOWERBODY\nWORKOUT CHALLENGE',
                             style: TextStyle(
                               color: Colors.black,
                               fontSize: 22.0,
@@ -87,28 +78,16 @@ class Agility extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
                             RoundInfoContainer(
-                              title: '10',
-                              subtitle: 'Exercise',
+                              title: 'Lower Body',
+                              subtitle: 'Challenges',
                             ),
-                            _divider(),
-                            GestureDetector(
-                              onTap: () =>  Navigator.of(context).push(MaterialPageRoute(
-                                builder: (context) => Step1(),
-                              )),
-                              child: RoundInfoContainer(
-                                title: "Steps",
-                                subtitle:"in Agility Workout",
-                              ),
+                            RoundInfoContainer(
+                              title: '18',
+                              subtitle: 'mins',
                             ),
-                            _divider(),
-                            GestureDetector(
-                              onTap: () =>  Navigator.of(context).push(MaterialPageRoute(
-                                builder: (context) => FLEX1(),
-                              )),
-                              child: RoundInfoContainer(
-                                title: 'Agility',
-                                subtitle: 'Benefit Facts',
-                              ),
+                            RoundInfoContainer(
+                              title: '17',
+                              subtitle: 'Work-outs',
                             ),
                           ],
                         ),
@@ -132,23 +111,24 @@ class Agility extends StatelessWidget {
               Expanded(
                 child: ListView.builder(
                   physics: BouncingScrollPhysics(),
-                  itemCount: round5.length,
+                  itemCount: round7.length,
                   itemBuilder: (BuildContext context, int index) {
                     return ListTile(
-                      isThreeLine: true,
+                      isThreeLine: false,
                       leading: Container(
                         width: 90.0,
                         decoration: BoxDecoration(
                           image: DecorationImage(
-                            image: AssetImage(round5[index]['leading'][0]),
+                            image: AssetImage(round7[index]['leading'][0]),
                             fit: BoxFit.cover,
                           ),
                           borderRadius: BorderRadius.circular(10.0),
                         ),
                       ),
-                      title: Text(round5[index]['title']),
+                      title: Text(round7[index]['title']),
                       subtitle: Text(
-                          '${round5[index]['subtitle']}\n${round5[index]['leading'][1]}\n${round5[index]['repeat']}'),
+                          '${round7[index]['subtitle']}\n${round7[index]['leading'][1]}'
+                      ),
 
                     );
                   },
@@ -159,11 +139,4 @@ class Agility extends StatelessWidget {
         ));
   }
 
-  Widget _divider() {
-    return Container(
-      width: 1.2,
-      height: 35,
-      color: Colors.white.withOpacity(.6),
-    );
-  }
 }

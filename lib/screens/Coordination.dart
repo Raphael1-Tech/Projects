@@ -1,7 +1,8 @@
 import 'dart:ui';
 
 import 'package:fitness_app/Activity/Coordination.dart';
-import 'package:fitness_app/Progress/Coordination.dart';
+
+import 'package:fitness_app/Steps%20you%20need%20to%20do/Coordination.dart';
 import 'package:fitness_app/widgets/home_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -93,7 +94,7 @@ class Coordination extends StatelessWidget {
                             _divider(),
                             GestureDetector(
                               onTap: () =>  Navigator.of(context).push(MaterialPageRoute(
-                                builder: (context) => Prog3(),
+                                builder: (context) => Step3(),
                               )),
                               child: RoundInfoContainer(
                                 title: "Procedure in ",

@@ -1,4 +1,5 @@
 
+import 'package:fitness_app/widgets/SplashScreen.dart';
 import 'package:flutter/material.dart';
 
 import 'Login.dart';
@@ -7,7 +8,7 @@ import 'Signup.dart';
 void main() {
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
-    home: Myfirstapp(),
+    home: SplashScreen(),
   ));
 }
 

@@ -1,7 +1,8 @@
 import 'dart:ui';
 
 import 'package:fitness_app/Activity/Muscular%20Endurance.dart';
-import 'package:fitness_app/Progress/Muscular%20Endurance.dart';
+
+import 'package:fitness_app/Steps%20you%20need%20to%20do/Muscular%20Endurance.dart';
 import 'package:fitness_app/widgets/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:fitness_app/widgets/round_info_container.dart';
@@ -94,7 +95,7 @@ class MuscularEndurance extends StatelessWidget {
                             _divider(),
                             GestureDetector(
                               onTap: () =>  Navigator.of(context).push(MaterialPageRoute(
-                                builder: (context) => Prog5(),
+                                builder: (context) => Step5(),
                               )),
                               child: RoundInfoContainer(
                                 title: "Procedure in ",

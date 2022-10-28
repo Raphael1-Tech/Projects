@@ -1,7 +1,7 @@
 import 'dart:ui';
 
 import 'package:fitness_app/Activity/Flexibility.dart';
-import 'package:fitness_app/Progress/Flexibility.dart';
+import 'package:fitness_app/Steps%20you%20need%20to%20do/Flexibility.dart';
 import 'package:fitness_app/widgets/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:fitness_app/widgets/round_info_container.dart';
@@ -90,20 +90,16 @@ class Flexibility extends StatelessWidget {
                           subtitle: 'Exercise',
                         ),
                         _divider(),
-                        GestureDetector(
-                          onTap: () =>  Navigator.of(context).push(MaterialPageRoute(
-                            builder: (context) => Prog4(),
-                          )),
-                          child: GestureDetector(
+
+                          GestureDetector(
                             onTap: () =>  Navigator.of(context).push(MaterialPageRoute(
-                              builder: (context) => Prog4(),
+                              builder: (context) => Step4(),
                             )),
                             child: RoundInfoContainer(
                               title: "Procedure in ",
                               subtitle: "Things You'll Do",
                             ),
                           ),
-                        ),
                         _divider(),
                         GestureDetector(
                           onTap: () =>  Navigator.of(context).push(MaterialPageRoute(

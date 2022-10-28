@@ -5,8 +5,15 @@ import 'dart:ui';
 
 import 'package:fitness_app/screens/Agility.dart';
 import 'package:fitness_app/screens/Balance.dart';
+import 'package:fitness_app/screens/Full%20body.dart';
+import 'package:fitness_app/screens/Lower%20Body.dart';
 import 'package:fitness_app/screens/Muscular%20Endurance.dart';
 import 'package:fitness_app/screens/Coordination.dart';
+import 'package:fitness_app/screens/abs.dart';
+import 'package:fitness_app/screens/arm.dart';
+import 'package:fitness_app/screens/chest.dart';
+import 'package:fitness_app/screens/leg.dart';
+import 'package:fitness_app/screens/shoulder.dart';
 import 'package:flutter/material.dart';
 import 'package:fitness_app/widgets/round_info_container.dart';
 import 'package:fitness_app/screens/Flexibility.dart';
@@ -81,7 +88,7 @@ class HomeScreen extends StatelessWidget {
                       height: 50,
                     ),
                     Text(
-                      "Exercise",
+                      "Exercise Categories",
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 28.0,
@@ -162,7 +169,7 @@ class HomeScreen extends StatelessWidget {
                       children: [
                         GestureDetector(
                           onTap: () =>  Navigator.of(context).push(MaterialPageRoute(
-                            builder: (context) => Flexibility(),
+                            builder: (context) => FULLBODY(),
                           )),
                           child: RoundInfoContainer(
                             title: 'FULL BODY',
@@ -172,7 +179,7 @@ class HomeScreen extends StatelessWidget {
                         _divider(),
                         GestureDetector(
                           onTap: () =>  Navigator.of(context).push(MaterialPageRoute(
-                            builder: (context) => Coordination(),
+                            builder: (context) => LOWERBODY(),
                           )),
                           child: RoundInfoContainer(
                             title: "LOWER BODY",
@@ -183,7 +190,7 @@ class HomeScreen extends StatelessWidget {
                     ),
                     SizedBox(height: 50,),
                     Text(
-                      "BEGINNER",
+                      "Time to Work-out as a Beginner",
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 20.0,
@@ -197,7 +204,7 @@ class HomeScreen extends StatelessWidget {
                   children: [
                     GestureDetector(
                       onTap: () =>  Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => Flexibility(),
+                        builder: (context) => ABS2(),
                       )),
                       child: RoundInfoContainer(
                         title: 'ABS',
@@ -207,7 +214,7 @@ class HomeScreen extends StatelessWidget {
                     _divider(),
                     GestureDetector(
                       onTap: () =>  Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => Coordination(),
+                        builder: (context) => CHEST(),
                       )),
                       child: RoundInfoContainer(
                         title: 'CHEST',
@@ -217,7 +224,7 @@ class HomeScreen extends StatelessWidget {
                     _divider(),
                     GestureDetector(
                       onTap: () =>  Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => Coordination(),
+                        builder: (context) => ARM(),
                       )),
                       child: RoundInfoContainer(
                         title: 'ARM',
@@ -227,7 +234,7 @@ class HomeScreen extends StatelessWidget {
                     _divider(),
                     GestureDetector(
                       onTap: () =>  Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => Coordination(),
+                        builder: (context) => LEG(),
                       )),
                       child: RoundInfoContainer(
                         title: 'LEG',
@@ -237,7 +244,7 @@ class HomeScreen extends StatelessWidget {
                     _divider(),
                     GestureDetector(
                       onTap: () =>  Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => Coordination(),
+                        builder: (context) => SHOULDER(),
                       )),
                       child: RoundInfoContainer(
                         title: 'SHOULDER & BACK',

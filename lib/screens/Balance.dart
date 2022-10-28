@@ -1,7 +1,8 @@
 import 'dart:ui';
 
 import 'package:fitness_app/Activity/Balance.dart';
-import 'package:fitness_app/Progress/Balance.dart';
+
+import 'package:fitness_app/Steps%20you%20need%20to%20do/Balance.dart';
 import 'package:fitness_app/widgets/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:fitness_app/widgets/round_info_container.dart';
@@ -93,7 +94,7 @@ class Balance extends StatelessWidget {
                             _divider(),
                             GestureDetector(
                               onTap: () =>  Navigator.of(context).push(MaterialPageRoute(
-                                builder: (context) => Prog2(),
+                                builder: (context) => Step2(),
                               )),
                               child: RoundInfoContainer(
                                 title: "Procedure in ",
