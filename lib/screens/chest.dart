@@ -83,10 +83,12 @@ class CHEST extends StatelessWidget {
                               title: 'CHEST ',
                               subtitle: 'TRAINING',
                             ),
+                            Divider(),
                             RoundInfoContainer(
                               title: '7',
                               subtitle: 'mins',
                             ),
+                            Divider(),
                             RoundInfoContainer(
                               title: '11',
                               subtitle: 'Work-outs',

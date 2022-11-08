@@ -1,129 +1,86 @@
 
 
-final List<Map<String, dynamic>> ABS= [
-  {
-    'leading': ['assets/images/LPJ.gif', 'Seconds'],
-    'title': 'Drill #1. JUMPING JACKS',
-    'subtitle': '00:30'
-  },
-  {
-    'leading': ['assets/images/frhkd.gif','Reps'],
-    'title': 'Drill #2. HEEL TOUCH',
-    'subtitle': 'x26'
+  final List<Map<String, dynamic>> HEY= [
+    {
+      'leading': ['assets/images/jumping jacks.gif', 'Seconds'],
+      'title': 'Drill #1. JUMPING JACKS',
+      'subtitle': '00:30'
+    },
+    {
+      'leading': ['assets/images/heel1.gif', 'Reps'],
+      'title': 'Drill #2. HEEL TOUCH',
+      'subtitle': 'x20'
+    },
+    {
+      'leading': ['assets/images/heel1.gif', 'Reps'],
+      'title': 'Drill #3. HEEL TOUCH',
+      'subtitle': 'x20'
+    },
+    {
+      'leading': ['assets/images/crunch1.gif', 'Reps'],
+      'title': 'Drill #4. ABDOMINAL CRUNCHES',
+      'subtitle': 'x16'
+    },
+    {
+      'leading': ['assets/images/crunch1.gif', 'Reps'],
+      'title': 'Drill #5. ABDOMINAL CRUNCHES',
+      'subtitle': 'x16'
+    },
+    {
+      'leading': ['assets/images/russian1.gif', 'Reps'],
+      'title': 'Drill #6. RUSSIAN TWIST',
+      'subtitle': 'x20'
+    },
+    {
+      'leading': ['assets/images/climber1.gif', 'Reps'],
+      'title': 'Drill #7.MOUNTAIN CLIMBER',
+      'subtitle': 'x16'
+    },
+    {
+      'leading': ['assets/images/climber1.gif', 'Reps'],
+      'title': 'Drill #8.MOUNTAIN CLIMBER',
+      'subtitle': 'x16'
+    },
 
-  },
-  {
-    'leading': ['assets/images/LRSTSD.gif', 'Reps'],
-    'title': 'Drill #3. CROSSOVER CRUNCH ',
-    'subtitle': 'x20'
+    {
+      'leading': ['assets/images/leg1.gif', 'Reps'],
+      'title': 'Drill #9. LEG RAISES',
+      'subtitle': 'x16'
+    },
+    {
+      'leading': ['assets/images/leg1.gif', 'Reps'],
+      'title': 'Drill #10. LEG RAISES',
+      'subtitle': 'x16'
+    },
+    {
+      'leading': ['assets/images/plank1.jpg', 'Seconds'],
+      'title': 'Drill #11. PLANK',
+      'subtitle': '00:20'
+    },
+    {
+      'leading': ['assets/images/russian1.gif', 'Reps'],
+      'title': 'Drill #12. RUSSIAN TWIST',
+      'subtitle': 'x12'
+    },
+    {
+      'leading': ['assets/images/cobra.gif', 'Seconds'],
+      'title': 'Drill #13. COBRA STRETCH',
+      'subtitle': '00:30'
+    },
 
-
-  },
-  {
-    'leading': ['assets/images/DD.gif', 'Reps'],
-    'title': 'Drill #4. MOUNTAIN CLIMBER',
-    'subtitle': 'x20'
-  },
-  {
-    'leading': ['assets/images/JBD.gif', 'Reps'],
-    'title': 'Drill #5. SIDE BRIDGES LEFT',
-    'subtitle': 'x12'
-
-  },
-  {
-    'leading': ['assets/images/LD.gif', 'Reps'],
-    'title': 'Drill #6.SIDE BRIDGES RIGHT',
-    'subtitle': 'x12'
-
-  },
-  {
-    'leading': ['assets/images/PJ.gif', 'Reps'],
-    'title': 'Drill #7. BUTT BRIDGE',
-    'subtitle': 'x20'
-
-  },
-  {
-    'leading': ['assets/images/PJ.gif', 'Reps'],
-    'title': 'Drill #8. V-UP',
-    'subtitle': 'x20'
-
-  },
-  {
-    'leading': ['assets/images/PJ.gif', 'Reps'],
-    'title': 'Drill #9. RUSSIAN TWIST',
-    'subtitle': 'x12'
-
-  },
-  {
-    'leading': ['assets/images/PJ.gif', 'Reps'],
-    'title': 'Drill #10. HEEL TOUCH',
-    'subtitle': 'x26'
-
-  },
-  {
-    'leading': ['assets/images/PJ.gif', 'Reps'],
-    'title': 'Drill #11. ABDOMINAL CRUNCHES',
-    'subtitle': 'x12'
-
-  },
-  {
-    'leading': ['assets/images/PJ.gif', 'Seconds'],
-    'title': 'Drill #12. PLANK',
-    'subtitle': '00:30'
-
-  },
-
-  {
-    'leading': ['assets/images/PJ.gif', 'Reps'],
-    'title': 'Drill #13. CROSSOVER CRUNCH',
-    'subtitle': "x20"
-
-  },
-  {
-    'leading': ['assets/images/PJ.gif', 'Reps'],
-    'title': 'Drill #14. LEG RAISES',
-    'subtitle': 'x16'
-
-  },
-  {
-    'leading': ['assets/images/PJ.gif', 'Reps'],
-    'title': 'Drill #15. BICYCLE CRUNCHES',
-    'subtitle': "x20"
-
-  },
-  {
-    'leading': ['assets/images/PJ.gif', 'Reps'],
-    'title': 'Drill #16. PUSH-UP & ROTATION',
-    'subtitle': 'x20'
-
-  },
-  {
-    'leading': ['assets/images/PJ.gif', 'Seconds'],
-    'title': 'Drill #17. SIDE PLANK RIGHT',
-    'subtitle': '00:20'
-
-  },
-  {
-    'leading': ['assets/images/PJ.gif', 'Seconds'],
-    'title': 'Drill #18. SIDE PLANK LEFT',
-    'subtitle': '00:20'
-
-  },
-  {
-    'leading': ['assets/images/PJ.gif', 'Seconds'],
-    'title': 'Drill #19. COBRA STRETCH',
-    'subtitle': '00:30'
-
-  },
-  {
-    'leading': ['assets/images/PJ.gif', 'Reps'],
-    'title': 'Drill #20 SPINE LUMBAR TWIST STRETCH LEFT',
-    'subtitle': 'x10'
-
-  },
-  {
-    'leading': ['assets/images/PJ.gif', 'Seconds'],
-    'title': 'Drill #21 SPINE LUMBAR TWIST STRETCH RIGHT',
-    'subtitle': '00:30'
-
-  },];
+    {
+      'leading': ['assets/images/plank1.jpg', 'Seconds'],
+      'title': 'Drill #14. PLANK',
+      'subtitle': '00:30'
+    },
+    {
+      'leading': ['assets/images/spine1.gif', 'Seconds'],
+      'title': 'Drill #15. SPINE LUMBAR TWIST STRETCH LEFT',
+      'subtitle': '00:30'
+    },
+    {
+      'leading': ['assets/images/spine1.gif', 'Seconds'],
+      'title': 'Drill #16. SPINE LUMBAR TWIST STRETCH RIGHT',
+      'subtitle': '00:30'
+    },
+  ];

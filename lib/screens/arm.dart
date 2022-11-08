@@ -83,10 +83,12 @@ class ARM extends StatelessWidget {
                               title: 'ARM ',
                               subtitle: 'TRAINING',
                             ),
+                            Divider(),
                             RoundInfoContainer(
                               title: '17',
                               subtitle: 'mins',
                             ),
+                            Divider(),
                             RoundInfoContainer(
                               title: '19',
                               subtitle: 'Work-outs',

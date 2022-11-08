@@ -1,14 +1,13 @@
 import 'dart:ui';
-import 'package:fitness_app/models/Abs.dart';
-import 'package:fitness_app/models/Full%20Body.dart';
-import 'package:fitness_app/models/LowerBody.dart';
 import 'package:fitness_app/widgets/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:fitness_app/widgets/round_info_container.dart';
 
+import '../models/leg.dart';
 
 
-class LEG extends StatelessWidget {
+
+class leg extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -67,7 +66,7 @@ class LEG extends StatelessWidget {
                           padding: EdgeInsets.symmetric(
                               vertical: 30.0, horizontal: 30.0),
                           child: Text(
-                            'ABS\nWORKOUT',
+                            'LEG\nWORKOUT CHALLENGE',
                             style: TextStyle(
                               color: Colors.black,
                               fontSize: 22.0,
@@ -79,15 +78,17 @@ class LEG extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
                             RoundInfoContainer(
-                              title: 'ABS ',
+                              title: 'LEG',
                               subtitle: 'TRAINING',
                             ),
+                            Divider(),
                             RoundInfoContainer(
-                              title: '29',
+                              title: '26',
                               subtitle: 'mins',
                             ),
+                            Divider(),
                             RoundInfoContainer(
-                              title: '21',
+                              title: '23',
                               subtitle: 'Work-outs',
                             ),
                           ],
@@ -112,23 +113,23 @@ class LEG extends StatelessWidget {
               Expanded(
                 child: ListView.builder(
                   physics: BouncingScrollPhysics(),
-                  itemCount: ABS.length,
+                  itemCount: Mylegs.length,
                   itemBuilder: (BuildContext context, int index) {
                     return ListTile(
-                      isThreeLine: true,
+                      isThreeLine: false,
                       leading: Container(
                         width: 90.0,
                         decoration: BoxDecoration(
                           image: DecorationImage(
-                            image: AssetImage(ABS[index]['leading'][0]),
+                            image: AssetImage(Mylegs[index]['leading'][0]),
                             fit: BoxFit.cover,
                           ),
                           borderRadius: BorderRadius.circular(10.0),
                         ),
                       ),
-                      title: Text(round7[index]['title']),
+                      title: Text(Mylegs[index]['title']),
                       subtitle: Text(
-                          '${ABS[index]['subtitle']}\n${ABS[index]['leading'][1]}'
+                          '${Mylegs[index]['subtitle']}\n${Mylegs[index]['leading'][1]}'
                       ),
 
                     );

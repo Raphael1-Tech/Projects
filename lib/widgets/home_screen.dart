@@ -204,7 +204,7 @@ class HomeScreen extends StatelessWidget {
                   children: [
                     GestureDetector(
                       onTap: () =>  Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => ABS2(),
+                        builder: (context) => abs(),
                       )),
                       child: RoundInfoContainer(
                         title: 'ABS',
@@ -234,7 +234,7 @@ class HomeScreen extends StatelessWidget {
                     _divider(),
                     GestureDetector(
                       onTap: () =>  Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => LEG(),
+                        builder: (context) => leg(),
                       )),
                       child: RoundInfoContainer(
                         title: 'LEG',

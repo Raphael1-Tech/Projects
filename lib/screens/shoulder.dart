@@ -83,13 +83,16 @@ class SHOULDER extends StatelessWidget {
                               title: 'SHOULDER & BACK ',
                               subtitle: 'TRAINING',
                             ),
+                            Divider(),
                             RoundInfoContainer(
                               title: '17',
                               subtitle: 'mins',
                             ),
+                            Divider(),
                             RoundInfoContainer(
                               title: '17',
                               subtitle: 'Work-outs',
+
                             ),
                           ],
                         ),

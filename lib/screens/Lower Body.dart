@@ -81,10 +81,12 @@ class LOWERBODY extends StatelessWidget {
                               title: 'Lower Body',
                               subtitle: 'Challenges',
                             ),
+                            Divider(),
                             RoundInfoContainer(
                               title: '18',
                               subtitle: 'mins',
                             ),
+                            Divider(),
                             RoundInfoContainer(
                               title: '17',
                               subtitle: 'Work-outs',

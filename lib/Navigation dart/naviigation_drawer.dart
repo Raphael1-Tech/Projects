@@ -1,6 +1,6 @@
 import 'package:fitness_app/Login.dart';
+import 'package:fitness_app/Navigation%20dart/pages/Report.dart';
 import 'package:fitness_app/Navigation%20dart/pages/my%20account.dart';
-import 'package:fitness_app/Navigation%20dart/pages/people.dart';
 import 'package:fitness_app/Navigation%20dart/pages/settings.dart';
 import 'package:fitness_app/widgets/SplashScreen.dart';
 import 'package:flutter/material.dart';
@@ -29,16 +29,23 @@ class NavigationDrawer extends StatelessWidget {
                   icon: Icons.account_box_rounded,
                   onPressed: ()=> onItemPressed(context, index: 1)
               ),
+              Divider(),
+              DrawerItem(
+                  name: 'Report of my Training',
+                  icon: Icons.account_box_rounded,
+                  onPressed: ()=> onItemPressed(context, index: 2)
+              ),
               SizedBox(height: 30,),
+              Divider(),
               DrawerItem(
                   name: 'Settings',
                   icon: Icons.settings,
-                  onPressed: ()=> onItemPressed(context, index: 2)
+                  onPressed: ()=> onItemPressed(context, index: 3)
               ),
               DrawerItem(
                   name: 'Log out',
                   icon: Icons.logout,
-                  onPressed: ()=> onItemPressed(context, index: 3)
+                  onPressed: ()=> onItemPressed(context, index: 4)
               ),
               SizedBox(height: 30,),
 
@@ -57,9 +64,12 @@ class NavigationDrawer extends StatelessWidget {
         Navigator.push(context, MaterialPageRoute(builder: (context) => SettingsUI()));
         break;
       case 2:
-        Navigator.push(context, MaterialPageRoute(builder: (context) => SettingsPage()));
+        Navigator.push(context, MaterialPageRoute(builder: (context) => CalendarPage()));
         break;
       case 3:
+        Navigator.push(context, MaterialPageRoute(builder: (context) => SettingsPage()));
+        break;
+      case 4:
         Navigator.push(context, MaterialPageRoute(builder: (context) => SplashScreen()));
         break;
 

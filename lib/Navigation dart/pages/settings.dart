@@ -57,8 +57,8 @@ class _SettingsPageState extends State<SettingsPage> {
               height: 10,
             ),
             buildAccountOptionRow(context, "Account Settings"),
-            buildAccountOptionRow(context, "Report Technical Problem"),
-            buildAccountOptionRow(context, "Help"),
+            buildAccountOptionRow1(context, "Report Technical Problem"),
+            buildAccountOptionRow2(context, "Help"),
             SizedBox(
               height: 40,
             ),
@@ -86,7 +86,6 @@ class _SettingsPageState extends State<SettingsPage> {
             ),
             buildNotificationOptionRow("Sounds and Notifications", true),
             buildNotificationOptionRow("Message Notifications", true),
-            buildNotificationOptionRow("Groups in Android Auto", false,),
             SizedBox(
               height: 50,
             ),
@@ -128,7 +127,7 @@ class _SettingsPageState extends State<SettingsPage> {
                   width: 8,
                 ),
                 Text(
-                  "Free Features",
+                  "Other Features",
                   style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                 ),
               ],
@@ -140,7 +139,9 @@ class _SettingsPageState extends State<SettingsPage> {
             SizedBox(
               height: 10,
             ),
-            buildNotificationOptionRow("Automatic Downloads", false),
+            buildNotificationOptionRow("Sync to Google Fit", false),
+            buildNotificationOptionRow("Keep the screen on", true),
+            buildAccountOptionRow3(context, "Metric & Imperial Units"),
             //Sending photos, messages and stickers will not use your data
             SizedBox(
               height: 50,
@@ -183,9 +184,12 @@ class _SettingsPageState extends State<SettingsPage> {
                 content: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    Text("Option 1"),
-                    Text("Option 2"),
-                    Text("Option 3"),
+                    Text("Personal Information"),
+                    SizedBox(height: 10,),
+                    Text("Security and Login"),
+                    SizedBox(height: 10,),
+                    Text("Blocking"),
+                    SizedBox(height: 10,),
                   ],
                 ),
                 actions: [
@@ -220,4 +224,175 @@ class _SettingsPageState extends State<SettingsPage> {
       ),
     );
   }
+}
+GestureDetector buildAccountOptionRow1(BuildContext context, String title) {
+  return GestureDetector(
+    onTap: () {
+      showDialog(
+          context: context,
+          builder: (BuildContext context) {
+            return AlertDialog(
+              title: Text(title),
+              content: Column(
+
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Text("Please let us know if you encountered a problem.\nWhile using the app.\nYour feedback helps improve Workout Buddy."),
+                  SizedBox(height: 30),
+                  Padding(padding: EdgeInsets.symmetric(horizontal: 20,
+                  ),
+                  ),
+                  Text("REPORT PROBLEM",
+                  style: TextStyle(
+                    fontSize: 28,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.red,
+                  ),
+                    textAlign: TextAlign.center,
+                  ),
+                ],
+              ),
+              actions: [
+                ElevatedButton(
+                    onPressed: () {
+                      Navigator.of(context).pop();
+                    },
+                    child: Text("Close")),
+              ],
+            );
+          });
+    },
+    child: Padding(
+      padding: const EdgeInsets.symmetric(vertical: 8.0),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Text(
+            title,
+            style: TextStyle(
+              fontSize: 18,
+              fontWeight: FontWeight.w500,
+              color: Colors.grey[600],
+            ),
+          ),
+          Icon(
+            Icons.arrow_forward_ios,
+            color: Colors.grey,
+          ),
+        ],
+      ),
+    ),
+  );
+}
+GestureDetector buildAccountOptionRow2(BuildContext context, String title) {
+  return GestureDetector(
+    onTap: () {
+      showDialog(
+          context: context,
+          builder: (BuildContext context) {
+            return AlertDialog(
+              title: Text(title),
+              content: Column(
+
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                ],
+              ),
+              actions: [
+                ElevatedButton(
+                    onPressed: () {
+                      Navigator.of(context).pop();
+                    },
+                    child: Text("Close")),
+              ],
+            );
+          });
+    },
+    child: Padding(
+      padding: const EdgeInsets.symmetric(vertical: 8.0),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Text(
+            title,
+            style: TextStyle(
+              fontSize: 18,
+              fontWeight: FontWeight.w500,
+              color: Colors.grey[600],
+            ),
+          ),
+          Icon(
+            Icons.arrow_forward_ios,
+            color: Colors.grey,
+          ),
+        ],
+      ),
+    ),
+  );
+}
+GestureDetector buildAccountOptionRow3(BuildContext context, String title) {
+  return GestureDetector(
+    onTap: () {
+      showDialog(
+          context: context,
+          builder: (BuildContext context) {
+            return AlertDialog(
+              title: Text(title),
+              content: Column(
+
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Text("Weight Unit\n (lbs/kg",
+                style: TextStyle(
+                  fontSize: 12,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.red,
+                ),
+                textAlign: TextAlign.start,
+              ),
+                  SizedBox(height: 30),
+                  Padding(padding: EdgeInsets.symmetric(horizontal: 20,
+                  ),
+                  ),
+                  Text("Height Unit\n(in/cm)",
+                    style: TextStyle(
+                      fontSize: 12,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.red,
+                    ),
+                    textAlign: TextAlign.start,
+                  ),
+                ],
+              ),
+              actions: [
+                ElevatedButton(
+                    onPressed: () {
+                      Navigator.of(context).pop();
+                    },
+                    child: Text("Close")),
+              ],
+            );
+          });
+    },
+    child: Padding(
+      padding: const EdgeInsets.symmetric(vertical: 8.0),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Text(
+            title,
+            style: TextStyle(
+              fontSize: 18,
+              fontWeight: FontWeight.w500,
+              color: Colors.grey[600],
+            ),
+          ),
+          Icon(
+            Icons.arrow_forward_ios,
+            color: Colors.grey,
+          ),
+        ],
+      ),
+    ),
+  );
 }
