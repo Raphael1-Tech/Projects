@@ -9,7 +9,6 @@ import 'package:fitness_app/screens/Full%20body.dart';
 import 'package:fitness_app/screens/Lower%20Body.dart';
 import 'package:fitness_app/screens/Muscular%20Endurance.dart';
 import 'package:fitness_app/screens/Coordination.dart';
-import 'package:fitness_app/screens/abs.dart';
 import 'package:fitness_app/screens/arm.dart';
 import 'package:fitness_app/screens/chest.dart';
 import 'package:fitness_app/screens/leg.dart';
@@ -19,6 +18,7 @@ import 'package:fitness_app/widgets/round_info_container.dart';
 import 'package:fitness_app/screens/Flexibility.dart';
 
 import '../Navigation dart/naviigation_drawer.dart';
+import '../screens/abs.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
