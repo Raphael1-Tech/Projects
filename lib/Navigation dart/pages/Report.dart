@@ -1,3 +1,4 @@
+import 'package:fitness_app/widgets/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:table_calendar/table_calendar.dart';
 
@@ -41,12 +42,18 @@ class _calendarPageState extends State<calendarPage> {
     return Scaffold(
       backgroundColor: purple,
       appBar: AppBar(
+        backgroundColor: Theme.of(context).scaffoldBackgroundColor,
         elevation: 0,
-        backgroundColor: Colors.transparent,
-        title: Text("My Training Date", style: TextStyle(
-            color: Colors.white
-        ),),
-      ),
+        leading: IconButton(
+          icon: Icon(
+            Icons.arrow_back_ios,
+            color: Colors.black,
+          ),
+          onPressed: () {
+            Navigator.push(context, MaterialPageRoute(builder: (context) => HomeScreen()));
+          },
+          ),
+        ),
       body: Column(
         children: [
           TableCalendar(

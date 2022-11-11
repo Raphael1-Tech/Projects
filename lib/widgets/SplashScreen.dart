@@ -1,10 +1,10 @@
 import 'dart:async';
 
-import 'package:fitness_app/main.dart';
+import 'package:fitness_app/widgets/main.dart';
 import 'package:fitness_app/widgets/home_screen.dart';
 import 'package:flutter/material.dart';
 
-import '../Login.dart';
+import 'Login.dart';
 
 class SplashScreen extends StatelessWidget {
   static const String routeName = '/splash';

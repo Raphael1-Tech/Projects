@@ -17,7 +17,7 @@ import 'package:flutter/material.dart';
 import 'package:fitness_app/widgets/round_info_container.dart';
 import 'package:fitness_app/screens/Flexibility.dart';
 
-import '../Navigation dart/naviigation_drawer.dart';
+import '../Navigation dart/pages/naviigation_drawer.dart';
 import '../screens/abs.dart';
 
 class HomeScreen extends StatelessWidget {

@@ -1,8 +1,10 @@
-import 'package:fitness_app/main.dart';
+import 'package:fitness_app/widgets/main.dart';
 import 'package:flutter/material.dart';
 
-
 import 'Login.dart';
+
+
+
 
 class SignUpPage extends StatefulWidget {
 

@@ -96,8 +96,8 @@ class Flexibility extends StatelessWidget {
                               builder: (context) => Step4(),
                             )),
                             child: RoundInfoContainer(
-                              title: "Procedure in ",
-                              subtitle: "Things You'll Do",
+                              title: "Steps",
+                              subtitle: "in Flexibility Workout",
                             ),
                           ),
                         _divider(),

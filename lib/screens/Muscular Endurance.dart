@@ -98,8 +98,8 @@ class MuscularEndurance extends StatelessWidget {
                                 builder: (context) => Step5(),
                               )),
                               child: RoundInfoContainer(
-                                title: "Procedure in ",
-                                subtitle: "Things You'll Do",
+                                title: "Steps",
+                                subtitle: "in Muscular Endurance Workout",
                               ),
                             ),
                             _divider(),

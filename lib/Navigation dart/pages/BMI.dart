@@ -1,17 +1,5 @@
 import 'package:flutter/material.dart';
-/*
-  Green : #12a644
-  Grey  : #403f3d
- */
-void main() => runApp(
-    MaterialApp(
-      theme: ThemeData(
-          primaryColor:Color(0xFF12a644)
-      ),
-      home: MyApp(),
-      debugShowCheckedModeBanner: false,
-    )
-);
+
 
 class MyApp extends StatefulWidget {
   @override

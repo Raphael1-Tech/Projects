@@ -1,4 +1,4 @@
-import 'package:fitness_app/Login.dart';
+import 'package:fitness_app/widgets/Login.dart';
 import 'package:fitness_app/Navigation%20dart/pages/Report.dart';
 import 'package:fitness_app/Navigation%20dart/pages/my%20account.dart';
 import 'package:fitness_app/Navigation%20dart/pages/settings.dart';

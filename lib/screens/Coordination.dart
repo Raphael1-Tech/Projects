@@ -97,8 +97,8 @@ class Coordination extends StatelessWidget {
                                 builder: (context) => Step3(),
                               )),
                               child: RoundInfoContainer(
-                                title: "Procedure in ",
-                                subtitle: "Things You'll Do",
+                                title: "Steps",
+                                subtitle: "in Coordination Workout",
                               ),
                             ),
                             _divider(),
