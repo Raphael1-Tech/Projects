@@ -56,7 +56,7 @@ class Step3 extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-            '10 Agility Training Steps'
+            '10 Coordination Training Steps'
         ),
         backgroundColor: Colors.black,
         centerTitle: true,

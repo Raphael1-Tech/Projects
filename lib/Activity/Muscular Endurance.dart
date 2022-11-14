@@ -53,7 +53,7 @@ class FLEX5 extends StatelessWidget {
             ),
             style: TextStyle(
               fontSize: 25,
-              height: 0,
+              height: 2,
             ),
           ),
         ),

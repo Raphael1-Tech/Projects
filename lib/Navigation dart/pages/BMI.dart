@@ -1,12 +1,15 @@
+import 'package:fitness_app/Navigation%20dart/pages/naviigation_drawer.dart';
 import 'package:flutter/material.dart';
 
+import '../../widgets/home_screen.dart';
 
-class MyApp extends StatefulWidget {
+
+class BMI extends StatefulWidget {
   @override
-  _MyAppState createState() => _MyAppState();
+  _BMIState createState() => _BMIState();
 }
 
-class _MyAppState extends State<MyApp> {
+class _BMIState extends State<BMI> {
   double _height=170.0;
   double _weight=75.0;
   int _bmi=0;
@@ -15,13 +18,26 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     Size size=MediaQuery.of(context).size;
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Theme.of(context).scaffoldBackgroundColor,
+        elevation: 0,
+        leading: IconButton(
+          icon: Icon(
+            Icons.arrow_back,
+            color: Colors.black,
+          ),
+          onPressed: () {
+            Navigator.push(context, MaterialPageRoute(builder: (context) => HomeScreen()));
+          },
+        ),
+      ),
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
             Container(
               height: size.height*0.40,
               width: double.infinity,
-              decoration: new BoxDecoration(color: Color(0xFF12a644)),
+              decoration: new BoxDecoration(color: Colors.black),
               padding: EdgeInsets.symmetric(vertical: 30.0,horizontal: 10.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -68,7 +84,7 @@ class _MyAppState extends State<MyApp> {
               child: Column(
                 children: <Widget>[
                   SizedBox(height: size.height*0.03,),
-                  Text("Choose Data",style: TextStyle(color: Color(0xFF12a644),fontSize: 30.0,fontWeight: FontWeight.bold),),
+                  Text("Choose Data",style: TextStyle(color: Colors.black,fontSize: 30.0,fontWeight: FontWeight.bold),),
                   SizedBox(height: size.height*0.03,),
                   RichText(
                     text: TextSpan(
@@ -155,7 +171,7 @@ class _MyAppState extends State<MyApp> {
                             else  {_condition=" Underweight";}
                           });
                         },
-                        child: Text("Calculate",style: TextStyle(color: Colors.white,fontSize: 20.0),),
+                        child: Text("Calculate",style: TextStyle(color: Colors.black,fontSize: 30.0),),
                       ),
                     ),
                   )

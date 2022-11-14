@@ -2,9 +2,11 @@ import 'dart:async';
 
 import 'package:fitness_app/widgets/main.dart';
 import 'package:fitness_app/widgets/home_screen.dart';
+import 'package:fitness_app/widgets/splashscreen1.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import 'Login.dart';
+
 
 class SplashScreen extends StatelessWidget {
   static const String routeName = '/splash';
@@ -18,7 +20,7 @@ class SplashScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Timer(Duration(seconds: 3), () => Navigator.push(context, MaterialPageRoute(builder: (_) => Myfirstapp())));
+    Timer(Duration(seconds: 3), () => Navigator.push(context, MaterialPageRoute(builder: (_) => splashscreen1())));
 
     return Scaffold(
       backgroundColor: Colors.black,

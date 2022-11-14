@@ -36,13 +36,13 @@ class Myfirstapp extends StatelessWidget {
           child: Column(
             // even space distribution
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            crossAxisAlignment:  CrossAxisAlignment.center,
+            crossAxisAlignment:  CrossAxisAlignment.start,
             children: <Widget> [
               Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   Text(
-                    ' WORKOUT \t BUDDY',
+                    'Time to Register',
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 30.0,
@@ -56,35 +56,35 @@ class Myfirstapp extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
-                          'An app where you can be physical strong',
+                          'YOU BUILT DIFFERENT\nYour Stronger\nYour Faster\nYour Better',
                         style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 18.0,
+                          fontWeight: FontWeight.normal,
+                          fontSize: 25.0,
                           color: Colors.white,
                         ),
                         textAlign: TextAlign.center,
                       ),
-                      SizedBox(height:10),
-                      Text("motivated and pump up",
+                      SizedBox(height:30),
+                      Text("NO PAIN!",
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
-                          fontSize: 16,
-                          color: Colors.white,
+                          fontSize: 20,
+                          color: Colors.red,
                         ),
                       ),
                     ],
                   ),
-                  SizedBox(height: 10,
+                  SizedBox(height: 30,
                   ),
                   Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
-                        'This will help you get in shape and to be fit',
+                        'NO GAIN!',
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
-                          fontSize: 14.0,
-                          color: Colors.white,
+                          fontSize: 20.0,
+                          color: Colors.red,
                         ),
                       ),
                     ],
