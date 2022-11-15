@@ -14,26 +14,35 @@ class SignUpPage extends StatefulWidget {
 }
 
 class _SignUpPageState extends State<SignUpPage> {
-
   bool isHiddenPassword1 = false;
-  bool isPasswordCharacter = false;
-  bool hasPasswordOneNumber = false;
+  bool _isPasswordEightCharacter = false;
+  bool _hasPasswordOneNumber = false;
 
-  onPasswordChange(String password) {
+
+  onPasswordChanged(String password) {
     final numericRegex = RegExp(r'[0-9]');
-
     setState(() {
-      isPasswordCharacter = false;
-      if (password.length >= 8)
-        isPasswordCharacter = true;
+      _isPasswordEightCharacter = false;
+      if(password.length >= 8)
+        _isPasswordEightCharacter = true;
 
-      hasPasswordOneNumber = false;
-      if (numericRegex.hasMatch(password))
-        hasPasswordOneNumber = true;
+      _hasPasswordOneNumber = false;
+      if(numericRegex.hasMatch(password))
+        _hasPasswordOneNumber = true;
+
+      _isPasswordEightCharacter = false;
+      if(password.length >= 8)
+        _isPasswordEightCharacter = true;
+
+      _hasPasswordOneNumber = false;
+      if(numericRegex.hasMatch(password))
+        _hasPasswordOneNumber = true;
+
+
 
     });
-
   }
+
 
   @override
   Widget build(BuildContext context) {
@@ -114,6 +123,7 @@ class _SignUpPageState extends State<SignUpPage> {
                     style: TextStyle(color: Colors.white),
                   ),
                   TextField(
+                    onChanged: (password) => onPasswordChanged(password),
                       obscureText: isHiddenPassword1,
                       decoration: InputDecoration(
                         hintText: "Password",
@@ -130,48 +140,50 @@ class _SignUpPageState extends State<SignUpPage> {
                       ),
                     style: TextStyle(color: Colors.white),
                   ) ,
-                  SizedBox(height: 20,),
+                  SizedBox(height: 10,),
                   Row(
                     children: [
                       AnimatedContainer(duration: Duration(milliseconds: 500),
                         width: 20,
                         height: 20,
                         decoration: BoxDecoration(
-                            color: isPasswordCharacter ? Colors.lightGreenAccent:Colors.transparent,
-                            border: isPasswordCharacter ?  Border.all(color: Colors.transparent,):
-                            Border.all(color: Colors.grey.shade400),
-                            borderRadius: BorderRadius.circular(50)
+                          color: _isPasswordEightCharacter ? Colors.green: Colors.transparent,
+                          border: _isPasswordEightCharacter ? Border.all(color: Colors.transparent):
+                              Border.all(color: Colors.grey.shade400),
+                          borderRadius: BorderRadius.circular(50)
                         ),
+                        child: Center(child: Icon(Icons.check, color: Colors.white, size: 15,),),
                       ),
-                      SizedBox(height: 20,),
-                      Text("Contains at least 8 characters",
+                      SizedBox(height: 10,),
+                      Text("Contains at least 8 Characters",
                         style: TextStyle(
                           color: Colors.white,
-                        ),
-                      )
+                        ),)
                     ],
                   ),
+                  SizedBox(height: 10,),
                   Row(
                     children: [
                       AnimatedContainer(duration: Duration(milliseconds: 500),
                         width: 20,
                         height: 20,
                         decoration: BoxDecoration(
-                            color: hasPasswordOneNumber ? Colors.lightGreenAccent:Colors.transparent,
-                            border: hasPasswordOneNumber ?  Border.all(color: Colors.transparent):
+                            color: _hasPasswordOneNumber ? Colors.green: Colors.transparent,
+                            border: _hasPasswordOneNumber ? Border.all(color: Colors.grey.shade400):
                             Border.all(color: Colors.grey.shade400),
                             borderRadius: BorderRadius.circular(50)
                         ),
+                        child: Center(child: Icon(Icons.check, color: Colors.white, size: 15,),),
                       ),
-                      SizedBox(height: 20,),
+                      SizedBox(height: 10,),
                       Text("Contains at least 1 number",
                         style: TextStyle(
                           color: Colors.white,
-                        ),
-                      ),
+                        ),)
                     ],
                   ),
                   TextField(
+                    onChanged: (password) => onPasswordChanged(password),
                       obscureText: isHiddenPassword1,
                       decoration: InputDecoration(
                         hintText: " Confirm Password",
@@ -188,46 +200,48 @@ class _SignUpPageState extends State<SignUpPage> {
                       ),
                     style: TextStyle(color: Colors.white),
                   ),
-                  SizedBox(height: 20,),
+                  SizedBox(height: 10,),
                   Row(
                     children: [
                       AnimatedContainer(duration: Duration(milliseconds: 500),
                         width: 20,
                         height: 20,
                         decoration: BoxDecoration(
-                            color: isPasswordCharacter ? Colors.lightGreenAccent:Colors.transparent,
-                            border: isPasswordCharacter ?  Border.all(color: Colors.transparent):
+                            color: _isPasswordEightCharacter ? Colors.green: Colors.transparent,
+                            border: _isPasswordEightCharacter ? Border.all(color: Colors.grey.shade400):
                             Border.all(color: Colors.grey.shade400),
                             borderRadius: BorderRadius.circular(50)
                         ),
+                        child: Center(child: Icon(Icons.check, color: Colors.white, size: 15,),),
                       ),
                       SizedBox(height: 10,),
-                      Text("Contains at least 8 characters",
+                      Text("Contains at least 8 Characters",
                         style: TextStyle(
                           color: Colors.white,
                         ),)
                     ],
                   ),
+                  SizedBox(height: 10,),
                   Row(
                     children: [
                       AnimatedContainer(duration: Duration(milliseconds: 500),
                         width: 20,
                         height: 20,
                         decoration: BoxDecoration(
-                            color: hasPasswordOneNumber ? Colors.lightGreenAccent:Colors.transparent,
-                            border: hasPasswordOneNumber ?  Border.all(color: Colors.transparent):
+                            color: _hasPasswordOneNumber ? Colors.green: Colors.transparent,
+                            border: _hasPasswordOneNumber ? Border.all(color: Colors.grey.shade400):
                             Border.all(color: Colors.grey.shade400),
                             borderRadius: BorderRadius.circular(50)
                         ),
+                        child: Center(child: Icon(Icons.check, color: Colors.white, size: 15,),),
                       ),
+                      SizedBox(height: 10,),
                       Text("Contains at least 1 number",
                         style: TextStyle(
                           color: Colors.white,
                         ),)
                     ],
                   ),
-                ],
-              ),
               Container(
                 child: MaterialButton(
                   onPressed: (){},
@@ -277,7 +291,7 @@ class _SignUpPageState extends State<SignUpPage> {
               )
             ],
           ),
-        ),
+        ])),
       ),
     );
   }
