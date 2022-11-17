@@ -11,7 +11,7 @@ class _PieChartSampleState extends State<PieChartSample> {
   int _clickedIndex;
 
   List<PieChartSectionData> buildPieChartSections() {
-    return List.generate(4, (index) {
+    return List.generate(5, (index) {
       final bool isClicked = index == _clickedIndex;
       final double fontSize = isClicked ? 35 : 20;
       final double radius = isClicked ? 120 : 100;
@@ -20,8 +20,8 @@ class _PieChartSampleState extends State<PieChartSample> {
         case 0:
           return PieChartSectionData(
             color: Color(0xff0293ee),
-            value: 40,
-            title: '40%',
+            value: 15,
+            title: '15%',
             radius: radius,
             titleStyle: TextStyle(
               fontSize: fontSize,
@@ -32,8 +32,8 @@ class _PieChartSampleState extends State<PieChartSample> {
         case 1:
           return PieChartSectionData(
             color: Color(0xfff8b250),
-            value: 30,
-            title: '30%',
+            value: 22,
+            title: '22%',
             radius: radius,
             titleStyle: TextStyle(
               fontSize: fontSize,
@@ -44,8 +44,8 @@ class _PieChartSampleState extends State<PieChartSample> {
         case 2:
           return PieChartSectionData(
             color: Color(0xff845bef),
-            value: 15,
-            title: '15%',
+            value: 8,
+            title: '8%',
             radius: radius,
             titleStyle: TextStyle(
               fontSize: fontSize,
@@ -65,6 +65,18 @@ class _PieChartSampleState extends State<PieChartSample> {
               color: Colors.white,
             ),
           );
+        case 4:
+          return PieChartSectionData(
+            color: Color(0xffFF9800),
+            value: 40,
+            title: '40%',
+            radius: radius,
+            titleStyle: TextStyle(
+              fontSize: fontSize,
+              fontWeight: FontWeight.bold,
+              color: Colors.white,
+            ),
+          );
         default:
           return null;
       }
@@ -76,7 +88,7 @@ class _PieChartSampleState extends State<PieChartSample> {
     return Row(
       children: [
         Padding(
-          padding: const EdgeInsets.all(20),
+          padding: const EdgeInsets.all(200),
           child: PieChart(
             PieChartData(
               pieTouchData: PieTouchData(touchCallback: (touchResponse) {
@@ -101,22 +113,27 @@ class _PieChartSampleState extends State<PieChartSample> {
           children: [
             PieIndicator(
               color: Color(0xff0293ee),
-              text: 'First',
+              text: 'ABS TRAINING',
             ),
             SizedBox(height: 5),
             PieIndicator(
               color: Color(0xfff8b250),
-              text: 'Second',
+              text: 'CHEST TRAINING',
             ),
             SizedBox(height: 5),
             PieIndicator(
               color: Color(0xff845bef),
-              text: 'Third',
+              text: 'ARM TRAINING',
             ),
             SizedBox(height: 5),
             PieIndicator(
               color: Color(0xff13d38e),
-              text: 'Fourth',
+              text: 'LEG TRAINING',
+            ),
+            SizedBox(height: 5),
+            PieIndicator(
+              color: Color(0xffFF9800),
+              text: 'SHOULDER AND BACK TRAINING',
             ),
             SizedBox(height: 5),
           ],
