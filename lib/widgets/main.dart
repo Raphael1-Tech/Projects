@@ -1,7 +1,7 @@
 
 import 'package:fitness_app/widgets/SplashScreen.dart';
+import 'package:fitness_app/widgets/onboard.dart';
 import 'package:flutter/material.dart';
-
 import 'Login.dart';
 import 'Signup.dart';
 

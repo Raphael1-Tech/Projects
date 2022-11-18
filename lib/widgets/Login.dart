@@ -1,20 +1,44 @@
 
 import 'package:fitness_app/widgets/main.dart';
 import 'package:fitness_app/widgets/home_screen.dart';
+import 'package:fitness_app/widgets/onboard.dart';
 import 'package:flutter/material.dart';
+import 'package:form_field_validator/form_field_validator.dart';
 
 import 'Signup.dart';
 
 class LoginPage extends StatefulWidget {
+  static const String routeName = '/login';
 
+  static Route route() {
+    return MaterialPageRoute(
+      settings: RouteSettings(name: routeName),
+      builder: (context) => HomeScreen(),
+    );
+  }
+
+  final _formKey = GlobalKey<FormState>();
 
   @override
   State<LoginPage> createState() => _LoginPageState();
 }
 
 class _LoginPageState extends State<LoginPage> {
+  String validatePassword(String value) {
+    if (value.isEmpty) {
+      return "* Required";
+    } else if (value.length < 8) {
+      return "Password should be at last 6 characters";
+    } else if (value.length < 15) {
+      return "Password should be at last 15 characters";
+    } else
+      return null;
+  }
+
   final TextEditingController _controller = TextEditingController();
   bool isHiddenPassword = false;
+  bool _isPasswordEightCharacters = false;
+  bool _hasPasswordNumber = false;
 
 
   @override
@@ -72,41 +96,53 @@ class _LoginPageState extends State<LoginPage> {
                     Padding(padding: EdgeInsets.symmetric(horizontal: 20.0),
                       child: Column(
                           children:<Widget> [
-                            TextField(
+                            TextFormField(
                               decoration: InputDecoration(
-                                  hintText: "Username",
-                                hintStyle: TextStyle(
-                                    color: Colors.white
-                                ),
-                              ) ,
-                              style: TextStyle(color: Colors.white),
-                            ),
-                            TextField(
-                              controller: _controller,
-                              decoration: InputDecoration(
-                                  hintText: "Email/Phone Number",
-                                hintStyle: TextStyle(
-                                    color: Colors.white
-                                ),
-                              ) ,
-                              style: TextStyle(color: Colors.white),
-                            ),
-                            TextField(
-                                obscureText: isHiddenPassword,
-                                decoration: InputDecoration(
-                                  hintText: "Password",
-                                  hintStyle: TextStyle(
-                                      color: Colors.white
+                                  border: OutlineInputBorder(
+                                      borderRadius: BorderRadius.circular(10),
+                                      borderSide: BorderSide(color: Colors.black)
                                   ),
+                                  focusedBorder: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(10),
+                                    borderSide: BorderSide(color: Colors.black),
+                                  ),
+                                  hintText: "Username", hintStyle: TextStyle(
+                                  color: Colors.white
+                              ),
+                                  contentPadding: EdgeInsets.symmetric(horizontal: 20, vertical: 20)
+                              ),
+                              style: TextStyle(color: Colors.white),
+                              validator:EmailValidator(errorText: "Enter valid email id"),
+                            ),
+                            SizedBox(height: 10,),
+                            TextFormField(
+                              onChanged: (password) => onPasswordChanged(password),
+                              obscureText: isHiddenPassword,
+                              decoration: InputDecoration(
                                   suffixIcon: InkWell(
                                     onTap: _togglePasswordView,
                                     child: Icon(
                                       Icons.visibility,
                                     ),
                                   ),
-                                ),
+                                  border: OutlineInputBorder(
+                                      borderRadius: BorderRadius.circular(10),
+                                      borderSide: BorderSide(color: Colors.black)
+                                  ),
+                                  focusedBorder: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(10),
+                                    borderSide: BorderSide(color: Colors.black),
+                                  ),
+                                  hintText: "Password",
+                                  hintStyle: TextStyle(
+                                    color: Colors.white,
+                                  ),
+                                  contentPadding: EdgeInsets.symmetric(horizontal: 20, vertical: 20)
+                              ),
                               style: TextStyle(color: Colors.white),
+                              validator:EmailValidator(errorText: "Enter secure password"),
                             ),
+                            SizedBox(height: 20),
 
                             Row(
                             children: [
@@ -165,7 +201,7 @@ class _LoginPageState extends State<LoginPage> {
                           ),
                           child:
                           GestureDetector(onTap: () =>  Navigator.of(context).push(MaterialPageRoute(
-                            builder: (context) => HomeScreen(),
+                            builder: (context) => OnboardingScreen(),
                           )),
                             child: Text(
                               'Log-in Here',
@@ -221,6 +257,19 @@ class _LoginPageState extends State<LoginPage> {
       isHiddenPassword = !isHiddenPassword;
     });
   }
+
+  onPasswordChanged(String password) {
+    final numericRegex = RegExp(r'[0-9]');
+  setState(() {
+    _isPasswordEightCharacters = false;
+    if(password.length >=8)
+      _isPasswordEightCharacters = true;
+
+    _hasPasswordNumber = false;
+    if(numericRegex.hasMatch(password))
+      _hasPasswordNumber = true;
+
+  });}
 }
 
 class NewWidget extends StatelessWidget {

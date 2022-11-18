@@ -15,7 +15,7 @@ class splashscreen1 extends StatelessWidget {
       body: SafeArea(
         child: Column(
           children: <Widget>[
-            Text("Welcome to Workout\tBuddy!",
+            Text("Welcome to Workout\t Buddy!",
               style: TextStyle(
                 color: Colors.white,
                 fontSize: 38,
