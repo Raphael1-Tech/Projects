@@ -49,7 +49,7 @@ class MuscularEndurance extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         IconButton(
-                          icon: Icon(Icons.arrow_back),
+                          icon: Icon(Icons.chevron_left),
                           iconSize: 30,
                           color: Colors.black,
                           onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context) => HomeScreen()))

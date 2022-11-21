@@ -96,9 +96,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     children: const <Widget>[
     Center(
     child: Image(
-    image: NetworkImage(
-    ''
-    ),
+    image: AssetImage("assets/images/power.png"),
     height: 200,
     width: 200,
     ),
@@ -106,7 +104,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     SizedBox(height: 30.0),
     Align(
     alignment: Alignment.center,
-    child: Text('Pick',
+    child: Text('Choose',
     style: TextStyle(
     color: Colors.white70,
     fontSize: 25,
@@ -128,28 +126,28 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     crossAxisAlignment: CrossAxisAlignment.start,
     children: const <Widget>[
     Center(
-    child: Image(
-    image: NetworkImage(
-    'https://i.pinimg.com/564x/0b/66/6e/0b666efaa44fe94d0adeefdc2bf13aa5.jpg',
+      child: Image(
+        image: AssetImage(
+          'assets/images/power - Copy (2).png',
+        ),
+    height: 200.0,
+    width: 200.0,
     ),
-    height: 300.0,
-    width: 300.0,
     ),
-    ),
-    SizedBox(height: 30.0),
+    SizedBox(height: 10.0),
     Align(
     alignment: Alignment.center,
-    child: Text('Breed',
+    child: Text('Click',
     style: TextStyle(
     color: Colors.white70,
     fontSize: 25,
     fontWeight: FontWeight.bold)),
     ),
-    SizedBox(height: 15.0),
+    SizedBox(height: 10.0),
     Align(
     alignment: Alignment.center,
     child: Text(
-    'Start multiplying the fish, maybe your money will multiply as well ',
+    'It can be click anything that has on the exercised categories',
     style: TextStyle(color: Colors.white70)),
     ),
     ],
@@ -163,26 +161,26 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     Center(
     child: Image(
     image: AssetImage(
-    'lib/assets/fishTrad-PhotoRoom.png',
+    'assets/images/power3.png',
     ),
-    height: 300.0,
-    width: 300.0,
+    height: 200.0,
+    width: 200.0,
     ),
     ),
-    SizedBox(height: 30.0),
+    SizedBox(height: 20.0),
       Align(
         alignment: Alignment.center,
-        child: Text('Trade',
+        child: Text('View',
             style: TextStyle(
                 color: Colors.white70,
                 fontWeight: FontWeight.bold,
                 fontSize: 25)),
       ),
-      SizedBox(height: 15.0),
+      SizedBox(height: 10.0),
       Align(
         alignment: Alignment.center,
         child: Text(
-          'Have a lot of fish but have only one variety of it? \nStart trading and collect all the types u want',
+          'Categorized exercise can be viewed and can be ready to pull up some muscles',
           style: TextStyle(color: Colors.white70),
         ),
       ),
@@ -247,7 +245,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                           builder: (context) =>HomeScreen()));
                 },
                 label: Text(
-                  'Dive in',
+                  "Let's do this",
                   style:
                   TextStyle(color: Colors.tealAccent, fontSize: 20),
                 ),
