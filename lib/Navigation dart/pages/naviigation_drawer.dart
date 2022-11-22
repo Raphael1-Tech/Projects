@@ -1,7 +1,8 @@
 import 'package:fitness_app/Navigation%20dart/pages/BMI.dart';
+import 'package:fitness_app/Navigation%20dart/pages/calendarr.dart';
 import 'package:fitness_app/Progress%20graph/HomeScreen.dart';
 import 'package:fitness_app/widgets/Login.dart';
-import 'package:fitness_app/Navigation%20dart/pages/Report.dart';
+import 'package:fitness_app/Navigation%20dart/pages/calendar.dart';
 import 'package:fitness_app/Navigation%20dart/pages/my%20account.dart';
 import 'package:fitness_app/Navigation%20dart/pages/settings.dart';
 import 'package:fitness_app/widgets/SplashScreen.dart';
@@ -60,6 +61,20 @@ class NavigationDrawer extends StatelessWidget {
                   onPressed: ()=> onItemPressed(context, index: 6)
               ),
               SizedBox(height: 30,),
+              Divider(),
+              DrawerItem(
+                  name: "Under Construction",
+                  icon: Icons.file_download_off,
+                  onPressed: ()=> onItemPressed(context, index: 7)
+              ),
+              DrawerItem(
+                  name: "The Gym Shack",
+                  onPressed: ()=> onItemPressed(context, index: 8)
+              ),
+              DrawerItem(
+                  name: "My Gym Buddy",
+                  onPressed: ()=> onItemPressed(context, index: 9)
+              ),
 
             ],
           ),
@@ -76,7 +91,7 @@ class NavigationDrawer extends StatelessWidget {
         Navigator.push(context, MaterialPageRoute(builder: (context) => SettingsUI()));
         break;
       case 2:
-        Navigator.push(context, MaterialPageRoute(builder: (context) => CalendarPage()));
+        Navigator.push(context, MaterialPageRoute(builder: (context) => Calendar()));
         break;
       case 3:
         Navigator.push(context, MaterialPageRoute(builder: (context) => BMI()));
@@ -100,7 +115,7 @@ class NavigationDrawer extends StatelessWidget {
       children: [
         const CircleAvatar(
           radius: 40,
-          backgroundImage: NetworkImage('https://scontent.fcrk3-1.fna.fbcdn.net/v/t39.30808-6/278740214_2870892956388991_8840972835145742749_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeGjwNUHA_pNvE_lgc5XQQ1x8hj0f1rFQrPyGPR_WsVCs2xUAP31Iexu5RiffRCAe1CMHulw8OdNaQgR2ev7Rsp2&_nc_ohc=-I877lmyQ_gAX_cOn2g&_nc_ht=scontent.fcrk3-1.fna&oh=00_AfCLTAtXmEkubbVWptBGQpzh49065RQdzdGvOoX2dg8-uQ&oe=6376558D'),
+          backgroundImage: AssetImage('assets/images/raprap.jpg'),
         ),
         SizedBox(width: 10,),
         Column(

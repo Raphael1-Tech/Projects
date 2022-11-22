@@ -72,8 +72,8 @@ class _EditProfilePageState extends State<EditProfilePage> {
                           shape: BoxShape.circle,
                           image: DecorationImage(
                               fit: BoxFit.cover,
-                              image: NetworkImage(
-                                "https://scontent.fmnl30-2.fna.fbcdn.net/v/t39.30808-6/278740214_2870892956388991_8840972835145742749_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeGjwNUHA_pNvE_lgc5XQQ1x8hj0f1rFQrPyGPR_WsVCs2xUAP31Iexu5RiffRCAe1CMHulw8OdNaQgR2ev7Rsp2&_nc_ohc=hO5Xi_8EipEAX8txJ3X&_nc_ht=scontent.fmnl30-2.fna&oh=00_AfB1z1gMKJkeyT2NHWjBYmoyTLgOK3E-CQX2kfh-kDqQSQ&oe=636E6C8D"
+                              image: AssetImage(
+                                "assets/images/raprap.jpg"
                               ))),
                     ),
                     Positioned(

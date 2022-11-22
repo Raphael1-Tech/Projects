@@ -100,8 +100,57 @@ class _calendarPageState extends State<calendarPage> {
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.only(topLeft: Radius.circular(40),
                       topRight: Radius.circular(40)),
-                  color: Colors.white
+                  color: Color(0xff30384c)
               ),
+              child: Stack(
+                children: <Widget> [
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      Padding(padding: EdgeInsets.only(top:50),
+                      child: Text("Today", style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 30,
+                        fontWeight: FontWeight.bold,
+                      ),),),
+                      Container(
+                        padding: EdgeInsets.only(top:20),
+                        child: Row(
+                          children:<Widget> [
+                            Icon(Icons.check_circle,
+                              color: Color(0xff00cf8d),
+                              size: 30,
+                            ),
+                            Container(
+                              padding: EdgeInsets.only(left: 10, right: 10),
+                              width: MediaQuery.of(context).size.width*0.8,
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children:<Widget> [
+                                  Text("Task #1",
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.white,
+                                  ),
+                                  ),
+                                  SizedBox(height: 10,),
+                                  Text("Hey Buddy! Time to work on your Lower Body and Leg area.",
+                                  style: TextStyle(
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.bold,
+                                    color:Colors.white,
+                                  ),)
+                                ],
+                              ),
+                            )
+                          ],
+                        )
+                      )
+                    ],
+                  )
+                ],
+              )
             ),
           )
         ],

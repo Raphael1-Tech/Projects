@@ -95,11 +95,13 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     crossAxisAlignment: CrossAxisAlignment.start,
     children: const <Widget>[
     Center(
-    child: Image(
-    image: AssetImage("assets/images/power.png"),
-    height: 200,
-    width: 200,
-    ),
+      child: Expanded(
+      child: Image(
+      image: AssetImage("assets/images/power.png"),
+      height: 200,
+      width: 200,
+      ),
+      ),
     ),
     SizedBox(height: 30.0),
     Align(
@@ -122,35 +124,39 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     ),
     Padding(
     padding: const EdgeInsets.all(40.0),
-    child: Column(
-    crossAxisAlignment: CrossAxisAlignment.start,
-    children: const <Widget>[
-    Center(
-      child: Image(
-        image: AssetImage(
-          'assets/images/power - Copy (2).png',
+    child: Expanded(
+      child: Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: const <Widget>[
+      Center(
+        child: Expanded(
+          child: Image(
+            image: AssetImage(
+              'assets/images/power - Copy (2).png',
+            ),
+        height: 200.0,
+        width: 200.0,
         ),
-    height: 200.0,
-    width: 200.0,
-    ),
-    ),
-    SizedBox(height: 10.0),
-    Align(
-    alignment: Alignment.center,
-    child: Text('Click',
-    style: TextStyle(
-    color: Colors.white70,
-    fontSize: 25,
-    fontWeight: FontWeight.bold)),
-    ),
-    SizedBox(height: 10.0),
-    Align(
-    alignment: Alignment.center,
-    child: Text(
-    'It can be click anything that has on the exercised categories',
-    style: TextStyle(color: Colors.white70)),
-    ),
-    ],
+        ),
+      ),
+      SizedBox(height: 10.0),
+      Align(
+      alignment: Alignment.center,
+      child: Text('Click',
+      style: TextStyle(
+      color: Colors.white70,
+      fontSize: 25,
+      fontWeight: FontWeight.bold)),
+      ),
+      SizedBox(height: 10.0),
+      Align(
+      alignment: Alignment.center,
+      child: Text(
+      'It can be click anything that has on the exercised categories',
+      style: TextStyle(color: Colors.white70)),
+      ),
+      ],
+      ),
     ),
     ),
     Padding(
