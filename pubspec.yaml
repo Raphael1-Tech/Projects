@@ -21,6 +21,7 @@ environment:
   sdk: ">=2.7.0 <3.0.0"
 
 dependencies:
+  lottie: ^1.2.1
   form_field_validator: ^1.0.1
   table_calendar: ^2.2.3
   google_fonts: ^2.1.0 # to use google fonts

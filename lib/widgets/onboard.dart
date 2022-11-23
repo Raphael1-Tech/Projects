@@ -78,71 +78,34 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     ),
     ),
     ),
-    Container(
-    height: 400.0,
-    child: PageView(
-    physics: const ClampingScrollPhysics(),
-    controller: _pageController,
-    onPageChanged: (int page) {
-    setState(() {
-    _currentPage = page;
-    });
-    },
-    children: <Widget>[
-    Padding(
-    padding: const EdgeInsets.all(40.0),
-    child: Column(
-    crossAxisAlignment: CrossAxisAlignment.start,
-    children: const <Widget>[
-    Center(
-      child: Expanded(
-      child: Image(
-      image: AssetImage("assets/images/power.png"),
-      height: 200,
-      width: 200,
-      ),
-      ),
-    ),
-    SizedBox(height: 30.0),
-    Align(
-    alignment: Alignment.center,
-    child: Text('Choose',
-    style: TextStyle(
-    color: Colors.white70,
-    fontSize: 25,
-    fontWeight: FontWeight.bold)),
-    ),
-    SizedBox(height: 15.0),
-    Align(
-    alignment: Alignment.center,
-    child: Text(
-    'Lets start by choosing your exercise. There is a lot of variety that you can choose. Pick the one that fits you. ',
-    style: TextStyle(color: Colors.white70)),
-    ),
-    ],
-    ),
-    ),
-    Padding(
-    padding: const EdgeInsets.all(40.0),
-    child: Expanded(
+    Expanded(
+      child: Container(
+      height: 400.0,
+      child: PageView(
+      physics: const ClampingScrollPhysics(),
+      controller: _pageController,
+      onPageChanged: (int page) {
+      setState(() {
+      _currentPage = page;
+      });
+      },
+      children: <Widget>[
+      Padding(
+      padding: const EdgeInsets.all(40.0),
       child: Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: const <Widget>[
       Center(
         child: Expanded(
-          child: Image(
-            image: AssetImage(
-              'assets/images/power - Copy (2).png',
-            ),
-        height: 200.0,
-        width: 200.0,
+        child: Image(
+        image: AssetImage("assets/images/power.png"),
+height: 400,
         ),
         ),
       ),
-      SizedBox(height: 10.0),
       Align(
       alignment: Alignment.center,
-      child: Text('Click',
+      child: Text('Choose',
       style: TextStyle(
       color: Colors.white70,
       fontSize: 25,
@@ -152,49 +115,86 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
       Align(
       alignment: Alignment.center,
       child: Text(
-      'It can be click anything that has on the exercised categories',
+      'Lets start by choosing your exercise. There is a lot of variety that you can choose. Pick the one that fits you. ',
       style: TextStyle(color: Colors.white70)),
       ),
       ],
       ),
-    ),
-    ),
-    Padding(
-    padding: const EdgeInsets.all(40.0),
-    child: Column(
-    crossAxisAlignment: CrossAxisAlignment.start,
-    children: const <Widget>[
-    Center(
-    child: Image(
-    image: AssetImage(
-    'assets/images/power3.png',
-    ),
-    height: 200.0,
-    width: 200.0,
-    ),
-    ),
-    SizedBox(height: 20.0),
-      Align(
-        alignment: Alignment.center,
-        child: Text('View',
-            style: TextStyle(
-                color: Colors.white70,
-                fontWeight: FontWeight.bold,
-                fontSize: 25)),
       ),
-      SizedBox(height: 10.0),
-      Align(
+      Padding(
+      padding: const EdgeInsets.all(40.0),
+      child: Expanded(
+        child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: const <Widget>[
+        Center(
+          child: Expanded(
+            child: Image(
+              image: AssetImage(
+                'assets/images/power - Copy (2).png',
+              ),
+          height: 200.0,
+          width: 200.0,
+          ),
+          ),
+        ),
+        SizedBox(height: 10.0),
+        Align(
+        alignment: Alignment.center,
+        child: Text('Click',
+        style: TextStyle(
+        color: Colors.white70,
+        fontSize: 25,
+        fontWeight: FontWeight.bold)),
+        ),
+        SizedBox(height: 10.0),
+        Align(
         alignment: Alignment.center,
         child: Text(
-          'Categorized exercise can be viewed and can be ready to pull up some muscles',
-          style: TextStyle(color: Colors.white70),
+        'It can be click anything that has on the exercised categories',
+        style: TextStyle(color: Colors.white70)),
+        ),
+        ],
         ),
       ),
-    ],
-    ),
-    ),
-    ],
-    ),
+      ),
+      Padding(
+      padding: const EdgeInsets.all(40.0),
+      child: Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: const <Widget>[
+      Center(
+      child: Image(
+      image: AssetImage(
+      'assets/images/power3.png',
+      ),
+      height: 200.0,
+      width: 200.0,
+      ),
+      ),
+      SizedBox(height: 20.0),
+        Align(
+          alignment: Alignment.center,
+          child: Text('View',
+              style: TextStyle(
+                  color: Colors.white70,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 25)),
+        ),
+        SizedBox(height: 10.0),
+        Align(
+          alignment: Alignment.center,
+          child: Text(
+            'Categorized exercise can be viewed and can be ready to pull up some muscles',
+            style: TextStyle(color: Colors.white70),
+          ),
+        ),
+      ],
+      ),
+      ),
+      ],
+      ),
+      ),
     ),
       Row(
         mainAxisAlignment: MainAxisAlignment.center,

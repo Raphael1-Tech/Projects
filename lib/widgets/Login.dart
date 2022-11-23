@@ -201,7 +201,7 @@ class _LoginPageState extends State<LoginPage> {
                           ),
                           child:
                           GestureDetector(onTap: () =>  Navigator.of(context).push(MaterialPageRoute(
-                            builder: (context) => OnboardingScreen(),
+                            builder: (context) => HomeScreen(),
                           )),
                             child: Text(
                               'Log-in Here',
