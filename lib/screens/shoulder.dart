@@ -1,7 +1,4 @@
 import 'dart:ui';
-import 'package:fitness_app/models/Abs.dart';
-import 'package:fitness_app/models/Full%20Body.dart';
-import 'package:fitness_app/models/LowerBody.dart';
 import 'package:fitness_app/models/shoulder.dart';
 import 'package:fitness_app/widgets/home_screen.dart';
 import 'package:flutter/material.dart';
@@ -24,7 +21,7 @@ class SHOULDER extends StatelessWidget {
                     height: 400.0,
                     decoration: BoxDecoration(
                       image: DecorationImage(
-                        image: AssetImage('assets/images/AGILE.jpg'),
+                        image: AssetImage('assets/images/back.webp'),
                         fit: BoxFit.cover,
                         alignment: Alignment.center,
                       ),

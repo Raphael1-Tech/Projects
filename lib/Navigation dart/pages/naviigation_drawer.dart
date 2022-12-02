@@ -1,8 +1,7 @@
-import 'package:fitness_app/Navigation%20dart/pages/BMI.dart';
+
 import 'package:fitness_app/Navigation%20dart/pages/calendarr.dart';
 import 'package:fitness_app/Progress%20graph/HomeScreen.dart';
-import 'package:fitness_app/widgets/Login.dart';
-import 'package:fitness_app/Navigation%20dart/pages/calendar.dart';
+import 'package:fitness_app/bmi%20offsets/calculator.dart';
 import 'package:fitness_app/Navigation%20dart/pages/my%20account.dart';
 import 'package:fitness_app/Navigation%20dart/pages/settings.dart';
 import 'package:fitness_app/widgets/SplashScreen.dart';
@@ -82,7 +81,6 @@ class NavigationDrawer extends StatelessWidget {
       ),
     );
   }
-
   void onItemPressed(BuildContext context, { int index}){
     Navigator.pop(context);
 

@@ -43,11 +43,12 @@ class _calendarPageState extends State<calendarPage> {
     return Scaffold(
       backgroundColor: purple,
       appBar: AppBar(
-        backgroundColor: Theme.of(context).scaffoldBackgroundColor,
+        backgroundColor:Colors.lightGreen,
         elevation: 0,
         leading: IconButton(
           icon: Icon(
             Icons.arrow_back_ios,
+
             color: Colors.black,
           ),
           onPressed: () {

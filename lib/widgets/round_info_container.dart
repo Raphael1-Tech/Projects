@@ -13,11 +13,11 @@ class RoundInfoContainer extends StatelessWidget {
         children: [
           Text(
             title,
-            style: TextStyle(color: Colors.black, fontSize: 18.0),
+            style: TextStyle(color: Colors.lightGreenAccent, fontSize: 18.0),
           ),
           Text(
             subtitle,
-            style: TextStyle(color: Colors.black, fontSize: 16.0),
+            style: TextStyle(color: Colors.lightGreenAccent, fontSize: 16.0),
           ),
         ],
       ),

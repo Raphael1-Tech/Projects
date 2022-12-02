@@ -21,7 +21,7 @@ class abs extends StatelessWidget {
                     height: 400.0,
                     decoration: BoxDecoration(
                       image: DecorationImage(
-                        image: AssetImage('assets/images/AGILE.jpg'),
+                        image: AssetImage('assets/images/abs.jpg'),
                         fit: BoxFit.cover,
                         alignment: Alignment.center,
                       ),

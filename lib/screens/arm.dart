@@ -24,7 +24,7 @@ class ARM extends StatelessWidget {
                     height: 400.0,
                     decoration: BoxDecoration(
                       image: DecorationImage(
-                        image: AssetImage('assets/images/AGILE.jpg'),
+                        image: AssetImage('assets/images/arm1.jpg'),
                         fit: BoxFit.cover,
                         alignment: Alignment.center,
                       ),

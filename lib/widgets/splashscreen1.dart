@@ -1,7 +1,7 @@
 import 'package:fitness_app/widgets/home_screen.dart';
 import 'package:fitness_app/widgets/main.dart';
 import 'package:flutter/material.dart';
-// import 'package:hope/home.dart';
+// import 'package:hope/calculator.dart';
 import 'Login.dart';
 
 class splashscreen1 extends StatelessWidget {
@@ -17,7 +17,7 @@ class splashscreen1 extends StatelessWidget {
           children: <Widget>[
             Text("Welcome to Workout \t Buddy!",
               style: TextStyle(
-                color: Colors.white,
+                color: Colors.lightGreenAccent,
                 fontSize: 38,
                 fontWeight: FontWeight.bold,
               ),
@@ -26,7 +26,7 @@ class splashscreen1 extends StatelessWidget {
             Text("This app will help you to be physically healthy and fit",
               textAlign: TextAlign.center,
               style: TextStyle(
-                color: Colors.white,
+                color: Colors.lightGreen,
                 fontWeight: FontWeight.w300,
                 fontSize: 25,
               ),
@@ -35,7 +35,7 @@ class splashscreen1 extends StatelessWidget {
             Text("Time for you to be buffed up",
               textAlign: TextAlign.center,
               style: TextStyle(
-                color: Colors.white,
+                color: Colors.lightGreen,
                 fontWeight: FontWeight.w300,
                 fontSize: 25,
               ),
@@ -56,7 +56,7 @@ class splashscreen1 extends StatelessWidget {
                 // the login button
                 MaterialButton(
                   minWidth: double.infinity,
-                  color: Colors.grey,
+                  color: Colors.lightGreenAccent,
                   height: 60.0,
                   onPressed: () {
                     Navigator.push(context, MaterialPageRoute(builder: (context) =>Myfirstapp()));

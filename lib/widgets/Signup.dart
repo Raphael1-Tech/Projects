@@ -245,7 +245,7 @@ class _SignUpPageState extends State<SignUpPage> {
               Container(
                 child: MaterialButton(
                   onPressed: (){},
-                  color: Colors.grey,
+                  color: Colors.lightGreen,
                   elevation: 0,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(50),
@@ -283,7 +283,7 @@ class _SignUpPageState extends State<SignUpPage> {
                     child: Text("Log-In",style: TextStyle(
                       fontWeight: FontWeight.w600,
                       fontSize: 18,
-                      color: Colors.white,
+                      color: Colors.lightGreenAccent,
                     ),
                     ),
                   )

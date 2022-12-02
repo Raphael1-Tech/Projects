@@ -1,7 +1,6 @@
 
 import 'package:fitness_app/widgets/main.dart';
 import 'package:fitness_app/widgets/home_screen.dart';
-import 'package:fitness_app/widgets/onboard.dart';
 import 'package:flutter/material.dart';
 import 'package:form_field_validator/form_field_validator.dart';
 
@@ -100,11 +99,11 @@ class _LoginPageState extends State<LoginPage> {
                               decoration: InputDecoration(
                                   border: OutlineInputBorder(
                                       borderRadius: BorderRadius.circular(10),
-                                      borderSide: BorderSide(color: Colors.black)
+                                      borderSide: BorderSide(color: Colors.lightGreenAccent)
                                   ),
                                   focusedBorder: OutlineInputBorder(
                                     borderRadius: BorderRadius.circular(10),
-                                    borderSide: BorderSide(color: Colors.black),
+                                    borderSide: BorderSide(color: Colors.lightGreenAccent),
                                   ),
                                   hintText: "Username", hintStyle: TextStyle(
                                   color: Colors.white
@@ -193,7 +192,7 @@ class _LoginPageState extends State<LoginPage> {
                           minWidth: double.infinity,
                           height: 60.0,
                           onPressed: (){},
-                          color: Colors.white,
+                          color: Colors.lightGreenAccent,
                           elevation: 0.0,
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(50.0),
@@ -234,7 +233,7 @@ class _LoginPageState extends State<LoginPage> {
                     child: Text(" Sign-Up", style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 16,
-                      color: Colors.white,
+                      color: Colors.lightGreen,
                     ),
                     ),
                   )

@@ -70,7 +70,7 @@ class _CalendarState extends State<Calendar> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Theme.of(context).scaffoldBackgroundColor,
+        backgroundColor: Colors.lightGreenAccent,
         elevation: 0,
         leading: IconButton(
           icon: Icon(

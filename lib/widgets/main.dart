@@ -100,7 +100,7 @@ class Myfirstapp extends StatelessWidget {
                       Navigator.push(context, MaterialPageRoute(builder: (context) => LoginPage()));
                     },
                     //defining the shape
-                    color: Colors.white,
+                    color: Colors.lightGreenAccent,
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(50.0)
                     ),
@@ -121,7 +121,7 @@ class Myfirstapp extends StatelessWidget {
                     onPressed: (){
                       Navigator.push(context, MaterialPageRoute(builder: (context) => SignUpPage()));
                     },
-                    color: Colors.white,
+                    color: Colors.lightGreen,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(50.0),
 

@@ -28,7 +28,7 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text(""),
         centerTitle: true,
-        backgroundColor: Colors.grey,
+        backgroundColor: Colors.transparent,
       ),
       body: Stack(
         children: [
@@ -61,7 +61,7 @@ class HomeScreen extends StatelessWidget {
                       padding:
                           EdgeInsets.symmetric(vertical: 10.0, horizontal: 22.0),
                       decoration: BoxDecoration(
-                        color: Colors.white.withOpacity(.6),
+                        color: Colors.transparent.withOpacity(.6),
                         borderRadius: BorderRadius.circular(5),
                       ),
                     ),
@@ -148,8 +148,6 @@ class HomeScreen extends StatelessWidget {
                             subtitle: 'Training',
                           ),
                         ),
-
-
                       ],
                     ),
                     SizedBox(height: 50,),
@@ -175,8 +173,10 @@ class HomeScreen extends StatelessWidget {
                             title: 'FULL BODY',
                             subtitle: '7X4 CHALLENGE',
                           ),
+
                         ),
                         _divider(),
+
                         GestureDetector(
                           onTap: () =>  Navigator.of(context).push(MaterialPageRoute(
                             builder: (context) => LOWERBODY(),
@@ -270,7 +270,7 @@ class HomeScreen extends StatelessWidget {
     return Container(
       width: 1.2,
       height: 35,
-      color: Colors.white.withOpacity(.6),
+      color: Colors.red.withOpacity(.6),
     );
   }
 }
